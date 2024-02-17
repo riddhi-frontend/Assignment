@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='main.js'></script>
+    <style>
+        body
+        {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #header
+        {
+            width: 90%;
+            height: 600px;
+            background: url(image/css-2.jpg) no-repeat;
+            background-size: cover;
+            margin-left: 5%;
+            margin-top: 2%;
+            margin-bottom: 0%;
+            clip-path: polygon(0 80%,0 0,100% 0%,100% 80%,49% 95%);
+        }
+        .heading
+        {
+            float: inline-end;
+            padding-right: 20px;
+        }
+        .heading ul li a:hover
+        {
+            color: red;
+        }
+        .heading ul li
+        {
+            text-decoration: none;
+            list-style-type: none;
+            display: inline-block;
+            padding: 0;
+        }
+        .heading ul li a
+        {
+            text-decoration: none;
+            display: inline;
+            text-transform: uppercase;
+            color: white;
+            padding-right: 12px;
+        }
+        .content
+        {
+            color: white;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 5%;
+            padding-bottom: 3%;
+            text-align: center;
+            word-spacing: 1px;
+            letter-spacing: 3px;
+        }
+        .content h2
+        {
+            font-size: 16px;
+        }
+        .content h1
+        {
+            font-size: 40px;
+        }
+        .content p
+        {
+            font-size: 14px;
+            font-weight: 550;
+        }
+        .btn
+        {
+            text-align: center;
+        }
+        input[class="buton"]
+        {
+            padding: 15px;
+            font-size: 16px;
+            width: 210px;
+            text-transform: uppercase;
+            background-color: darkred;
+            color: white;
+        }
+        input[class="button"]
+        {
+            padding: 15px;
+            font-size: 16px;
+            width: 210px;
+            text-transform: uppercase;
+        }
+        .block-1
+        {
+            width: 18%;
+            height: 500px;
+            background-color: white;
+            float: left;
+            margin-left: 5%;
+            margin-top: 2%;
+            padding: 5px;
+        }
+        .block-1 span
+        {
+            text-align: center;
+        }
+        .block-1 h1
+        {
+            color: black;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .block-1 h1:hover
+        {
+            color: red;
+        }
+        .block-1 hr
+        {
+            width: 22%;
+        }
+        .block-1 p
+        {
+            color: black;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 0;
+            padding-top: 0;
+        }
+        .dot
+        {
+            height: 10px;
+            width: 10px;
+            margin-bottom: 0.3%;
+            background-color: darkred;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <header class="heading">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">about us</a></li>
+                <li><a href="">portfolio</a></li>
+                <li><a href="">pricing</a></li>
+                <li><a href="">team</a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+        <h2>our clients are our first priority</h2>
+        <h1>welcome to sky</h1>
+        <hr style="width: 10%; display: inline-block;">
+        <span class="dot"></span>
+        <hr style="width: 13%; display: inline-block;">
+        <p>Lorem ipsum dolor sit amet consectetur,<br>adipisicing elit. Deserunt fugit delectus maiores deleniti ullam.<br>Alias, exercitationem temporibus! Dolorem veritatis, non rem architecto ab, <br>similique obcaecati quia iste pariatur amet facere.</p>
+        </div>
+
+    <div class="btn">
+        <input type="button" class="buton" name="text" value="get started now">
+        <input type="button" class="button" name="text" value="lern more">
+    </div>
+</section>
+
+    <section>
+        <div class="block-1">
+            <span class="fa fa-circle-o"></span><span class="fa fa-circle-o"></span>
+            <h1>sleek design</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet,rem ea debitis mollitia autem nihil? Dolorem maxime tempora rem amet fugiat?</p>
+        </div>
+        <div class="block-1">
+            <span class="fa fa-heart"></span>
+            <h1>cleen code</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet,rem ea debitis mollitia autem nihil? Dolorem maxime tempora rem amet fugiat?</p>
+        </div>
+        <div class="block-1">
+            <span class="fa fa-lightbulb-o"></span>
+            <h1>creative ideas</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet,rem ea debitis mollitia autem nihil? Dolorem maxime tempora rem amet fugiat?</p>
+        </div>
+        <div class="block-1">
+            <span class="fa fa-bomb"></span>
+            <h1>free support</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet,rem ea debitis mollitia autem nihil? Dolorem maxime tempora rem amet fugiat?</p>
+        </div>
+    </section>
+</body>
+</html>
