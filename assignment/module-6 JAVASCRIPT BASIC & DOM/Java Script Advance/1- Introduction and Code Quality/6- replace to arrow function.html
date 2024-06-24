@@ -1,0 +1,30 @@
+<!--Question: Replace Function Expressions with arrow functions in the code below:
+Function
+ask(question,yes,no)
+{
+    if(confirm(question))yes();
+    else no();
+}
+ask("do you agree?",Function()
+{
+    alert("you agreed.");
+},
+Function()
+{
+    alert("you canceled the execution.");
+}); -->
+<script>
+    const ask = (question, yes, no) =>
+    {
+        if (confirm(question)) yes();
+        else no();
+    }
+ask("do you agree?", () =>
+    {
+        alert("you agreed.");
+    }, 
+() => 
+    {
+        alert("you canceled the execution.");
+    });
+</script>

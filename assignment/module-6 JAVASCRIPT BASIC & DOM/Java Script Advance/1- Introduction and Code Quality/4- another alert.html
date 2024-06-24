@@ -1,0 +1,7 @@
+<!-- Question: What is the code below going to output? alert( null || 2 || undefined ); -->
+<script>
+    alert(null || 2 || undefined); // 2
+</script>
+
+<!-- The || operator in JavaScript returns the first truthy value it encounters.
+    In this case, null and undefined are both falsy values, so the operator skips them and returns the first truthy value it finds, which is 2. -->

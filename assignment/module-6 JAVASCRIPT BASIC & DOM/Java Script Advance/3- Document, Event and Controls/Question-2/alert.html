@@ -1,0 +1,88 @@
+<!-- Create a program that will select all the classes and loop over and whenever i click the button the alert should show -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Class Loop Alert</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        /* Add some basic styling */
+        body
+        {
+            font-family: Arial, sans-serif;
+        }
+        h1
+        {
+            margin: auto;
+            margin-top: 8%;
+            margin-left: 30%;
+            text-decoration: underline;
+        }
+        #main
+        {
+            width: 50%;
+            margin: auto;
+            margin-top: 2%;
+            border: 3px solid;
+            padding: 25px;
+        }
+        button
+        {
+            background-color: lightpink;
+            border: 2px solid black;
+            padding: 5px;
+            font-size: medium;
+            font-weight: bold;
+            box-shadow: 4px 4px 4px #f5f3f3;
+            cursor: pointer; /* displays a hand */
+            margin-top: 5px;
+            margin-left: 40%;
+        }
+    </style>
+    <style>
+        /* Some basic styling for demonstration */
+        .myClass {
+            padding: 10px;
+            margin: 5px;
+            width: 94%;
+            background-color: lightblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Click the button to show an Alert</h1>
+
+<section id="main">
+        <!-- Create some elements with the class "myClass" -->
+        <div class="myClass">Element 1</div>
+        <div class="myClass">Element 2</div>
+        <div class="myClass">Element 3</div>
+        
+        <!-- Add a button to trigger the alert -->
+        <button id="alertButton">Show Alert</button>
+</section>
+    
+    <script>
+    // Select all elements with class "myClass"
+    const elements = document.querySelectorAll('.myClass');
+    
+    // Loop over each element and attach a click event listener
+    elements.forEach(element =>
+    {
+        element.addEventListener('click', () => 
+        {
+            alert(`You clicked on ${element.textContent}`);
+        });
+    });
+    
+    // Add event listener to the button
+    document.getElementById('alertButton').addEventListener('click', () =>
+    {
+        alert('Button Clicked!');
+    });
+    </script>
+</body>
+</html>

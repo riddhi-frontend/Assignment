@@ -1,0 +1,12 @@
+<!--
+Turn the object into JSON and back Turn the user into JSON and then read it back into another variable.
+user = { name: "John Smith", age: 35}; -->
+<script>
+    let user = { name: "John Smith", age: 35 };
+        // Convert to JSON
+    let userJSON = JSON.stringify(user);
+        // Parse JSON back to an object
+    let parsedUser = JSON.parse(userJSON);
+console.log(parsedUser.name);
+console.log(parsedUser.age);
+</script>

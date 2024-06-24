@@ -1,0 +1,44 @@
+<!-- Prevent the browser when i click the form submit button -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Prevent Form Submission</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        form
+        {
+            width: 50%;
+            margin-left: 40%;
+            border: 3px solid;
+            padding: 20px;
+        }
+        input
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<!-- Form -->
+    <form id="myForm">
+        <input type="text" name="inputField" placeholder="Enter something...">
+        <button type="submit" id="submitButton">Submit</button>
+    </form>
+
+    <script>
+        // Get the form element
+            var form = document.getElementById("myForm");
+    
+        // Add event listener for form submission
+            form.addEventListener("submit", function(event)
+            {
+                    // Prevent the default form submission behavior
+                event.preventDefault();
+            });
+    </script>
+</body>
+</html>

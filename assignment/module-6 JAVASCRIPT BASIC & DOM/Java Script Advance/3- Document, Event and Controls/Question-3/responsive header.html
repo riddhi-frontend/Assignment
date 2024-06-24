@@ -1,0 +1,80 @@
+<!-- Create a responsive header using proper JavaScript-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Responsive Header</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        /* Some basic styling for demonstration */
+        body
+        {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header
+        {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        /* Style for the responsive header */
+        .responsive-header
+        {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        /* Style for the collapsed header */
+        .collapsed-header
+        {
+            background-color: #d28585;
+            color: #000000;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header id="header" class="responsive-header">
+        <h1>Responsive Header</h1>
+    </header>
+
+    <script>
+        // Function to toggle header class based on window width
+        function toggleHeaderClass()
+        {
+            const header = document.getElementById('header');
+            const screenWidth = window.innerWidth;
+        
+            if (screenWidth <= 768)
+            {
+                header.classList.remove('responsive-header');
+                header.classList.add('collapsed-header');
+            }
+            else
+            {
+                header.classList.remove('collapsed-header');
+                header.classList.add('responsive-header');
+            }
+        }
+        
+        // Initial call to toggleHeaderClass function
+        toggleHeaderClass();
+        
+        // Add event listener to resize event
+        window.addEventListener('resize', toggleHeaderClass);
+    </script>
+</body>
+</html>

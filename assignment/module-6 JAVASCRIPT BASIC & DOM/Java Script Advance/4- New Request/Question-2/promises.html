@@ -1,0 +1,32 @@
+Question-2: What is promises?
+<!-- 
+    A promise in JavaScript is a powerful construct that allows you to handle asynchronous operations more elegantly.
+    A promise is a special JavaScript object that acts as a placeholder (proxy) for the value of an ongoing operation.
+    It represents the eventual completion (or failure) of an asynchronous task and its resulting value.
+    Promises are commonly used when dealing with tasks that take time, such as making API requests, reading files, or waiting for user input.
+    A promise can be in one of three states:
+        Pending: Initial state, neither fulfilled nor rejected.
+        Fulfilled: The operation completed successfully, and the promise has a value.
+        Rejected: The operation failed, and the promise has an error reason.
+    Once a promise transitions from pending to either fulfilled or rejected, it becomes “settled.”
+    Promises allow you to chain asynchronous actions together.
+    You can use the .then(), .catch(), and .finally() methods to associate further actions with a promise.
+        Example:
+            fetch('https://api.example.com/data')
+            .then(response => response.json()) // Handle successful response
+            .then(data => console.log(data))
+            .catch(error => console.error('Error fetching data:', error)); // Handle errors
+        Creating a Promise:
+            const myPromise = new Promise((resolve, reject) => {
+            // Producing code (may take some time)
+             if (/* condition */) {
+                resolve('Success!'); // Resolve the promise
+                }
+            else {
+                reject(new Error('Something went wrong.')); // Reject the promise
+                }
+            });
+    Use .then() to handle the resolved value and .catch() to handle errors.
+    The .finally() method allows you to execute code regardless of whether the promise is fulfilled or rejected.
+        Note: promises make asynchronous code more manageable and help avoid callback hell.They provide a cleaner way to handle asynchronous tasks and improve code readability
+-->

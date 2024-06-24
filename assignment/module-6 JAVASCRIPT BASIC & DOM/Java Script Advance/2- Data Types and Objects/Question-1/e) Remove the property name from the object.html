@@ -1,0 +1,15 @@
+<!--
+e) Remove the property name from the object. -->
+<script>
+    let nm = {};
+nm.name = "Johan";
+
+nm.surname = "Smith";
+console.log(nm.name, nm.surname); // Output: Johan Smith
+
+delete nm.name;
+{
+    surname: 'Smith'
+}
+console.log(nm.name, nm.surname); // Output: undefined Smith
+</script>

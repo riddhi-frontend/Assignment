@@ -1,0 +1,130 @@
+<!-- Create a form and validate using JavaScript -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        /* Some basic styling for demonstration */
+        body
+        {
+            font-family: Arial, sans-serif;
+        }
+        form
+        {
+            max-width: 300px;
+            margin: 0 auto;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+        .main
+        {
+            border: 3px solid;
+            padding: 20px;
+            margin: auto;
+            margin-top: 3%;
+            width: 30%;
+            background-color: lightblue;
+        }
+        input
+        {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button
+        {
+            background-color: lightpink;
+            border: 2px solid black;
+            padding: 8px;
+            font-size: medium;
+            font-weight: bold;
+            box-shadow: 4px 4px 4px #f5f3f3;
+            cursor: pointer; /* displays a hand */
+            margin-top: 5px;
+            margin-left: 38%;
+        }
+        .error-message
+        {
+            color: red;
+            font-size: 14px;
+        }
+        h1
+        {
+            text-align: center;
+            text-shadow: 2px 2px 2px #f5f3f3;
+            margin-top: 8%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Vaidate using JavaScript</h1>
+    <section class="main">
+        <form id="myForm" onsubmit="validateForm(event)">
+            <input type="text" id="name" placeholder="Enter your surname" required>
+            <div id="surname" class="error-message"></div>
+        
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <div id="nameError" class="error-message"></div>
+        
+            <input type="number" id="name" placeholder="Enter your contact Number" required>
+            <div id="contactError" class="error-message"></div>
+        
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <div id="emailError" class="error-message"></div>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+<script>
+function validateForm(event)
+    {
+            // Prevent the form from submitting
+        event.preventDefault();
+
+            // Get form inputs
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+
+            // Get error message elements
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+
+            // Reset error messages
+        nameError.textContent = '';
+        emailError.textContent = '';
+
+            // Validate name
+        if (nameInput.value.trim() === '')
+            {
+                nameError.textContent = 'Name is required';
+                return false;
+            }
+
+            // Validate email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value.trim()))
+            {
+                emailError.textContent = 'Invalid email address';
+                return false;
+            }
+    // If everything is valid, submit the form
+    alert('Form submitted successfully!');
+    }
+</script>
+<!-- 
+^: Asserts the start of the string.
+[^\s@]+: Matches one or more characters that are not whitespace \s or @. This ensures that there is at least one character before the @ symbol.
+@: Matches the @ symbol literally.
+[^\s@]+: Matches one or more characters that are not whitespace \s or @. This ensures that there is at least one character after the @ symbol.
+\.: Matches a dot . literally. The dot must be escaped with a backslash \ because in regular expressions, a dot is a special character that matches any character.
+[^\s@]+: Matches one or more characters that are not whitespace \s or @. This ensures that there is at least one character after the dot.
+$: Asserts the end of the string. -->
+</body>
+</html>

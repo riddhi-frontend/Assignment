@@ -1,0 +1,18 @@
+<!--is Admin property into the variable isAdmin (false, if no such property) -->
+<script>
+    let user =
+    {
+        name: 'John'
+    };
+
+    let isAdmin = user.hasOwnProperty('isAdmin') ? user.isAdmin : false;
+
+    alert(isAdmin); // false
+</script>
+<!-- 
+    To assign the value of the isAdmin property of an object to a variable named isAdmin.
+
+    you can use the dot notation or the bracket notation to access the property and assign its value to the isAdmin variable.
+
+    If the is Admin property does not exist, you can assign a default value of false to the isAdmin variable.
+-->

@@ -1,0 +1,66 @@
+<!-- Use external js library to show slider-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- External css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- external js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style>
+        body
+        {
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+        img
+        {
+            width: 90%;
+            height: 450px;
+            margin: 3%;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container"> 
+        <div class="slide">
+            <img src="https://2.bp.blogspot.com/-lzN_rhLIJ14/T8jGmzkd2GI/AAAAAAAADh4/pqWFTfHgIJI/s1600/IMG_8628.JPG">
+        </div> 
+        <div class="slide">
+            <img src="https://th.bing.com/th/id/OIP.mdtyOd6YTzwJt5RqvsAmSQHaE8?w=288&h=192&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+        </div> 
+        <div class="slide">
+            <img src="https://th.bing.com/th/id/OIP.-j-Dn_I9dZJi5J9lL6RN7gHaE8?w=292&h=195&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+        </div> 
+        <div class="slide">
+            <img src="https://th.bing.com/th/id/OIP.bjpTLW2E7QMuXzlIe2JsrwHaGs?w=243&h=220&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+        </div> 
+        <div class="slide">
+            <img src="https://th.bing.com/th/id/OIP.wxcgt74cCHR1P25DTf-m8wHaJ3?w=180&h=210&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+        </div> 
+        <div class="slide">
+            <img src="https://th.bing.com/th/id/OIP.7pZSxjAZ9m8mtTRUa4moJAAAAA?rs=1&pid=ImgDetMain">
+        </div>
+        <div class="slide">
+            <img src="https://th.bing.com/th/id/OIP.afg7ir3cQk47di400DotvQHaHa?w=166&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+        </div>
+        <div class="slide">
+            <img src="https://th.bing.com/th/id/OIP.qgVCoR66rw1nBpiZzm34TwHaHa?w=191&h=190&c=7&r=0&o=5&dpr=1.4&pid=1.7">
+        </div>
+    </div>
+
+    <script>
+        $('.carousel-container').slick({
+            autoplay: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            speed: 350,
+        });
+    </script>
+</body>
+</html>

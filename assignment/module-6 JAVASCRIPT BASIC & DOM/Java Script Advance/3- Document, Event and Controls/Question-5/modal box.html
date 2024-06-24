@@ -1,0 +1,138 @@
+<!-- Create a modal box using css and Js with three buttons -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Modal Box</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        /* Style the modal container */
+        .modal
+        {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        /* Style the overlay */
+        .overlay
+        {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
+            z-index: 1;
+        }
+        /* Style the close button */
+        .btn-close
+        {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 0.5rem 0.7rem;
+            background: #eee;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        /* Style the buttons */
+        .btn-open
+        {
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 15px;
+            margin-left: 40%;
+            margin-top: 10%;
+            border: none;
+        }
+        .btn-primary
+        {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+        }
+        .btn-secondary
+        {
+            background-color: #999;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+        }
+        /* Hide the modal and overlay by default */
+        .hidden
+        {
+            display: none;
+        }
+        </style>
+</head>
+<body>
+<!-- The modal container -->
+    <section class="modal hidden">
+<!-- Modal content -->
+        <div class="modal-content">
+            <div class="flex">
+                <img src="https://i.pinimg.com/originals/5f/7c/31/5f7c311c35fcbba707361a3e724f5115.gif" width="80%" height="200px" style="margin-left: 10%;" alt="user" />
+                <button class="btn-close">⨉</button>
+            </div>
+            <div>
+                <h3>Stay in touch</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit fugit consectetur earum aliquid repudiandae nemo distinctio, soluta eos odio praesentium vitae ut fugiat. Illo enim modi excepturi debitis, veritatis eaque?</p>
+            </div>
+        <!-- Three buttons -->
+            <button class="btn btn-primary">Subscribe</button>
+            <button class="btn btn-secondary">Cancel</button>
+        </div>
+    </section>
+<!-- The overlay -->
+    <div class="overlay hidden"></div>
+<!-- The button to open the modal -->
+    <button class="btn btn-open">Open Modal</button>
+
+<script>
+    // Get the modal, overlay, and open button elements
+        const modal = document.querySelector('.modal');
+        const overlay = document.querySelector('.overlay');
+        const openModalBtn = document.querySelector('.btn-open');
+        const closeModalBtn = document.querySelector('.btn-close');
+        const cancelModalBtn = document.querySelector('.btn-secondary');
+        const subscribeBtn = document.querySelector('.btn-primary');
+
+    // Function to open the modal
+        function openModal()
+        {
+            modal.classList.remove('hidden');
+            overlay.classList.remove('hidden');
+        }
+    // Function to close the modal
+        function closeModal()
+        {
+            modal.classList.add('hidden');
+            overlay.classList.add('hidden');
+        }
+        subscribeBtn.addEventListener("click", function()
+        {
+            alert("Thank you for subscribing!");
+        });
+    // Add event listeners to open and close the modal
+        openModalBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+        cancelModalBtn.addEventListener('click', closeModal);
+</script>
+</body>
+</html>
