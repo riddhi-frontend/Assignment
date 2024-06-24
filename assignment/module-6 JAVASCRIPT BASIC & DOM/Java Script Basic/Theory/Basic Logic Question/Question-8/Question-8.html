@@ -1,0 +1,21 @@
+Question-8: Write a JavaScript Program to find the area of a triangle?
+<script>
+// function to calculate the area of a triangle
+    function calculateArea(base, height)
+    {
+        // calculate the area
+            let area = (base * height) / 2;
+        // return the area
+            return area;
+    }
+
+// get the base and height from the user
+let base = prompt("Enter the base of the triangle:");
+let height = prompt("Enter the height of the triangle:");
+
+// calculate the area
+let area = calculateArea(base, height);
+
+// display the area
+alert("The area of the triangle is " + area);
+</script>

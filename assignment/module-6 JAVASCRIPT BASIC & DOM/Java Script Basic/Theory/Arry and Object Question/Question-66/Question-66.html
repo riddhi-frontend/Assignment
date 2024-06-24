@@ -1,0 +1,307 @@
+Q.66 Find the length of a string without using libraryFunction?
+1. What is JavaScript?
+<!-- 
+    JavaScript is a high-level, dynamic, and interpreted programming language that is commonly used for building web applications.
+    It is a client-side scripting language, which means that it is executed by the web browser on the client-side (i.e., on the user's computer) rather than on the server-side.
+    It was initially called LiveScript, but it was later renamed to JavaScript in order to capitalize on the popularity of Java, which was a popular programming language at the time.
+-->
+
+2. What is the use of isNaN function? 
+<!-- 
+    The isNaN() function in JavaScript is used to determine whether a value is NaN (Not-a-Number).
+    The isNaN() function takes a single argument, which can be any value, and returns a Boolean value (true or false).
+    Example:console.log(isNaN(5)); // outputs false
+            console.log(isNaN("hello")); // outputs true
+-->
+
+3. What is negative Infinity?
+<!-- 
+    In JavaScript, negative infinity is a constant value used to indicate the lowest possible value.
+    It suggests that no other number is smaller than this one.
+    You can create negative infinity using the Number.NEGATIVE_INFINITY property.
+    When displayed, JavaScript shows it as -Infinity1. So, if you encounter a situation where you need to represent the smallest value, you can use Number.NEGATIVE_INFINITY
+-->
+
+4. Which company developed JavaScript?
+<!-- 
+    JavaScript was developed by Netscape Communications Corporation in 1995.
+-->
+
+5. What are undeclared and undefined variables?
+<!-- 
+    1) undeclered Variables:
+        An undeclared variable is a variable that has not been explicitly declared (defined) before it is used in the code.
+        Attempting to use an undeclared variable results in an error.
+            Example:// Undeclared variable 'x'
+                console.log(x); // Throws an error: "ReferenceError: x is not defined"
+
+    2) Undefined Variables:
+        An undefined variable is a variable that has been declared but has not been assigned a value.
+        When you declare a variable without initializing it, its default value is undefined.
+            Example: let y; // Declared but not assigned a value
+                console.log(y); // Outputs: "undefined"
+-->
+
+6. Write the code for adding new elements dynamically?
+<!-- 
+    <button onclick="createNewElement()">Create Element</button>
+    <script>
+        function createNewElement()
+        {
+                // Create a new paragraph element
+            var newParagraph = document.createElement('p');
+                // Set the text content of the paragraph
+            newParagraph.textContent = 'This is a dynamically created paragraph.';
+                // Append the paragraph to the container div
+            var container = document.getElementById('container');
+            container.appendChild(newParagraph);
+        }
+    </script>
+-->
+
+7. What is the difference between ViewState and SessionState?
+<!--
+    1) ViewState:
+        ViewState is maintained at the client’s end, specifically at the page level.
+        It is only visible within a single page and does not persist across multiple pages.
+        Values stored in ViewState persist during postback operations on the same page.
+        Data in ViewState is exposed to clients, so it’s not secure. Encryption can be used for security.
+        ViewState is typically used to manage page-instance-specific data within a single page.
+
+    2) SessionState:
+        SessionState is maintained at the server’s end.
+        It is accessible across all pages within a user session.
+        User-specific data stored in SessionState remains available until the session is completed or the browser is closed.
+        Data in SessionState is stored on the server and is more secure.
+        SessionState is useful for managing user-specific data throughout a session on a website2.
+
+    In summary, ViewState is client-side state management for a single page, while SessionState is server-side state management across multiple pages within a user session.
+-->
+
+8. What is === operator? 
+<!-- 
+    The === operator is a strict equality operator in JavaScript.
+    It checks whether the two operands are of the same type and have the same value.
+    It is similar to the == operator, but it performs a strict comparison, meaning that it checks both the value and the type of the operands.
+-->
+
+9. How can the style/class of an element be changed? 
+<!-- 
+    There are two ways to change the style/class of an element in JavaScript:
+        1) Using the style property:
+            The style property is an object that contains all the CSS properties for an element.
+            To change the style of an element, you can access the style property and set the desired CSS property to the desired value.
+                Example:to change the background color of an element, you can use the following code:
+                        document.getElementById("myElement").style.backgroundColor = "red";
+
+    2) Using the className property:
+        The className property is a string that contains the class name of an element.
+        To change the class name of an element, you can set the className property to the desired class name.
+            Example:to change the class name of an element, you can use the following code:
+                document.getElementById("myElement").className = "myNewClass";
+-->
+
+10. How to read and write a file using JavaScript?
+<!-- 
+    1) Reading a file:
+        To read a file using JavaScript, you can use the FileReader API.
+        The FileReader API provides a way to read the contents of a file as a data URL.
+            Example of how to read a file using the FileReader API:
+                <script>
+                    function readTextFile(file)
+                        {
+                            var rawFile = new XMLHttpRequest();
+                            rawFile.open("GET", file, false);
+                            rawFile.onreadystatechange = function ()
+                            {
+                                if (rawFile.readyState === 4)
+                                {
+                                    if (rawFile.status === 200 || rawFile.status == 0)
+                                    {
+                                    var allText = rawFile.responseText;
+                                    console.log(allText);
+                                    }
+                                }
+                            }
+                            rawFile.send(null);
+                        }
+                </script>
+        In this example, the readTextFile() function takes a file path as an argument and uses the FileReader API to read the contents of the file and log it to the console.
+
+    2) Writing a file:
+        To write a file using JavaScript, you can use the FileSaver API.
+        The FileSaver API provides a way to save a file to the user's computer.
+            Example of how to write a file using the FileSaver API:
+                <script>
+                    function saveTextFile(text)
+                    {
+                        var blob = new Blob([text], {type: "text/plain"});
+                        var url = window.URL.createObjectURL(blob);
+                        var a = document.createElement("a");
+                        a.href = url;
+                        a.download = "myFile.txt";
+                        a.click();
+                    }
+                </script>
+-->
+
+11. What are all the looping structures in JavaScript?
+<!-- 
+    1) for Loop:
+        A concise way to write a loop with initialization, condition, and increment/decrement in one line.
+            Example:
+                for (let i = 0; i < 5; i++)
+                    {
+                        console.log("Hello World!");
+                    }
+
+    2) while Loop:
+        Repeats a block of code while a specified condition is true.
+            Example:
+                let val = 1;
+                while (val < 6) 
+                    {
+                        console.log(val);
+                        val += 1;
+                    }
+
+    3) do-while Loop:
+        Similar to while loop, but it checks the condition after executing the statements.
+            Example:
+                let num = 1;
+                do
+                {
+                    console.log(num);
+                    num++;
+                }
+                while (num <= 5);
+
+    4) for-in Loop:
+        Iterates through the properties of an object.
+            Example:
+                const person = { name: "Alice", age: 30 };
+                for (const key in person)
+                {
+                    console.log(key + ": " + person[key]);
+                }
+-->
+
+12. How can you convert the string of any base to an integer in JavaScript?
+<!-- 
+    1) parseInt() function:
+        The parseInt() function parses a string and returns an integer.
+            Example:
+                const num = parseInt("123", 2);
+                console.log(num); // Output: 7
+
+    2) Using Math.floor():
+        If your string might be a float and you want an integer, use Math.floor():
+            Example:
+                var x = Math.floor("1000.01"); // Automatically converts string to number
+
+    3) Using Number():
+        The simplest way is to use the native Number function:
+            Example:
+                var x = Number("1000");
+
+    4) Using the Unary Plus Operator (+):
+        If your string is already in the form of an integer, you can use the unary plus operator:
+            Example:
+                var stringNumber = "42";
+                var integerNumber = +stringNumber;
+-->
+
+13. What is the function of the delete operator?
+<!-- 
+    The delete operator removes a property from an object.
+    It can be used to remove a property from an object, or to remove a property from an array.
+    The delete operator is a unary operator, which means it takes only one operand.
+    The syntax for the delete operator is as follows:delete object.property
+    <script>
+        const person = {
+            name: 'Alice',
+            age: 30
+            };
+        console.log(person.name); // 'Alice'
+        delete person.name;
+        console.log(person.name); // undefined
+-->
+
+14. What are all the types of Pop up boxes available in JavaScript?
+<!-- 
+    In JavaScript, there are three types of pop-up boxes:
+        1) Alert box:
+            The alert() function is used to display a simple alert dialog with a message and an OK button.
+                Example of how the alert() function can be used:
+                    <script>
+                        alert('Hello, world!');
+                    </script>
+
+        2) Confirm box:
+            The confirm() function is used to display a dialog with a message and two buttons: OK and Cancel.
+            The function returns a value of true if the user clicks the OK button, and false if the user clicks the Cancel button.
+                Example of how the confirm() function can be used:
+                    <script>
+                        const result = confirm('Are you sure you want to delete this item?');
+                        if (result)
+                            {
+                                // user clicked OK
+                            }
+                        else
+                            {
+                                // user clicked Cancel
+                            }
+
+        3) Prompt box:
+            The prompt() function is used to display a dialog with a message and a text input field.
+            The function returns the value entered by the user in the text input field.
+            If the user clicks the Cancel button, the function returns null.
+                Example of how the prompt() function can be used:
+                    <script>
+                        const name = prompt('What is your name?');
+                        console.log('Hello, ' + name + '!');
+                    </script>
+-->
+
+15. What is the use of Void (0)? 
+<!-- 
+    In JavaScript, the void operator is used to evaluate an expression and then return undefined.
+    The void operator is often used with the 0 argument to explicitly return undefined.
+    When used as the href value for a link (e.g., <a href="javascript:void(0)">Click me</a>), it prevents the browser from navigating to a new page or refreshing the current page when the link is clicked.
+-->
+
+16. How can a page be forced to load another page in JavaScript? 
+<!-- 
+    1) Using the assign() method:
+        The assign() method is used to load a new page by specifying the URL of the page as an argument.
+            Example:location.assign('https://www.example.com');
+
+    2) Using the replace() method:
+        The replace() method is similar to the assign() method, but it replaces the current page in the history stack instead of adding it to the stack.
+            Example:location.replace('https://www.example.com');
+
+    3) Setting the href property:
+        The href property of the location object can be set to the URL of the page that you want to load.
+        Example:location.href = 'https://www.example.com';
+-->
+
+17. What are the disadvantages of using innerHTML in JavaScript?
+<!-- 
+    The innerHTML property is a convenient way to set or get the HTML content of an element in JavaScript.
+        1) Performance:
+            The innerHTML property can be slower than other methods of setting or getting the content of an element, such as using the textContent property or using DOM methods like createElement() and appendChild().
+            This is because the innerHTML property requires the browser to parse the entire string of HTML and create a new DOM tree, which can be a time-consuming process.
+
+        2) Security:
+            The innerHTML property can be a security risk if you are setting it to a string that contains user-generated content.
+            This is because the browser will not sanitize the HTML, which means that any malicious code in the string will be executed.
+            This can lead to cross-site scripting (XSS) attacks and other security vulnerabilities.
+
+        3) Loss of event listeners:
+            If you set the innerHTML property of an element, any event listeners that were attached to the element or its child elements will be lost.
+            This is because the innerHTML property completely replaces the existing content of the element, including any event listeners that were attached to it.
+
+        4) Inconsistency with text nodes:
+            The innerHTML property does not include text nodes that are not contained within an element.
+            This can lead to inconsistencies when setting or getting the content of an element, especially if the element contains a mix of text and elements.
+-->

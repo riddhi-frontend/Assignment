@@ -1,0 +1,20 @@
+Q.51 Write a JavaScript program to get the current date. Expected Output : mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy?  
+<script>
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    let mm = today.getMonth() + 1; // Months start at 0!
+    let dd = today.getDate();
+// Pad single-digit day and month with leading zeros
+    if (dd < 10) dd = '0' + dd;
+    if (mm < 10) mm = '0' + mm;
+// Format options: mm-dd-yyyy, mm/dd/yyyy, dd-mm-yyyy, dd/mm/yyyy
+    const formattedDate = `${mm}-${dd}-${yyyy}`;
+    console.log(formattedDate);
+    const formattedDated = `${mm}/${dd}/${yyyy}`;
+    console.log(formattedDated);
+
+    const formattedDates = `${dd}-${mm}-${yyyy}`;
+    console.log(formattedDates);
+    const formatedDates = `${dd}/${mm}/${yyyy}`;
+    console.log(formatedDates);
+</script>

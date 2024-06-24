@@ -1,0 +1,73 @@
+Q.55 Form in Email, number, Password, Validation?  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <br><br>
+    <form id="myForm" style="margin-left: 1%;">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+        <label for="number">Number:</label>
+        <input type="number" id="number" name="number"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const form = document.getElementById("myForm");
+        form.addEventListener("submit", function(event)
+        {
+            event.preventDefault();
+            const email = document.getElementById("email");
+            const number = document.getElementById("number");
+            const password = document.getElementById("password");
+
+            const emailError = document.getElementsByName("email-error");
+            const numberError = document.getElementById("number-error");
+            const passwordError = document.getElementById("password-error");
+            let valid = true;
+            if (!email.value.includes("@"))
+            {
+                emailError.textContent = "Invalid email address";
+                valid = false;
+            }
+            else
+            {
+            emailError.textContent = "";
+            }
+        
+            if (isNaN(number.value) || number.value === "")
+            {
+                numberError.textContent = "Invalid number";
+                valid = false;
+            }
+            else
+            {
+                numberError.textContent = "";
+            }
+        
+            if (password.value.length < 8)
+            {
+                passwordError.textContent = "Password must be at least 8 characters long";
+                valid = false;
+            }
+            else
+            {
+                passwordError.textContent = "";
+            }
+            if (valid)
+            {
+                form.submit();
+            }
+        });
+    </script>
+</body>
+</html>

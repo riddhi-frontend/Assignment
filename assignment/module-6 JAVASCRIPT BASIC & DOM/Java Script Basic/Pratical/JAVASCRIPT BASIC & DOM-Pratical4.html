@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Es6 Slider</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
+    <!-- core css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">    <style>
+        body
+        {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+        font-family: Arial, sans-serif;
+        }
+        h1
+        {
+            font-size: 33px;
+            color: white;
+            text-align: center;
+            font-weight: 200;
+        }
+        h2
+        {
+            font-size: 20px;
+            color: gray;
+            text-align: center;
+            margin-top: -15px;
+            font-weight: 100;
+            margin-left: 60px;
+        }
+        .main
+        {
+            padding: 50px 0;
+        }
+        img
+        {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+        }
+        .col-md-8
+        {
+            width: 66%;
+            float: left;
+        }
+        .glide__arrows
+        {
+            /* position: absolute; */
+            bottom: -30px;
+        }
+        .glide__arrows .glide__arrow
+        {
+            width: 45px;
+            height: 45px;
+            margin-top: 13%;
+            text-align: center;
+            line-height: 35px;
+            border: none;
+            font-size: 30px;
+            outline: none;
+            margin-right: 20px;
+            padding: 0;
+        }
+        .glide__slide
+        {
+            transform: scale(.9);
+            filter: brightness(50%);
+            transition: all ease 0.3s;
+        }
+        .glide__slide.glide__slide--active
+        {
+            transform: scale(1);
+            filter: brightness(100%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Javascript Slider</h1>
+    <h2>Created by Dropinks</h2>
+    <div class="main">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide"><img src="https://th.bing.com/th/id/OIP.4P3Dbv2kJFJoVbF12n9vJwHaEK?rs=1&pid=ImgDetMain" alt="Slide 1"></li>
+                    <li class="glide__slide"><img src="https://wallpapercave.com/wp/wp3514363.jpg" alt="Slide 2"></li>
+                    <li class="glide__slide"><img src="https://th.bing.com/th/id/R.50d035a9633f473367cd4a944717b33b?rik=N1mWSXPlTSWg6A&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f8%2fd%2f1%2f234228.jpg&ehk=KoKID2OGau%2bJIxkhnnhtgeCskkwPS2tP2x29vL6XFMM%3d&risl=&pid=ImgRaw&r=0" alt="Slide 5"></li>
+                    <li class="glide__slide"><img src="https://th.bing.com/th/id/R.d393ae79f992600bee74a7b305b2b17e?rik=L%2bykB%2bhJpm2lyw&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-deep-lilac-solid-color-background.jpg&ehk=0NuRqJ7PeTdjUBxrtCpRI%2bycuyWACjYm04293F34gLw%3d&risl=&pid=ImgRaw&r=0" alt="Slide 6"></li>
+                    <li class="glide__slide"><img src="https://th.bing.com/th/id/OIP.JBRiP280mq8GF7eArmbDawHaEK?rs=1&pid=ImgDetMain" alt="Slide 3"></li>
+                </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<" style="margin-left: 33%; font-size: 50px;"><i class="bi bi-arrow-left"></i></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">" style="margin-right: 33%; font-size: 50px;"><i class="bi bi-arrow-right"></i></button>
+            </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+<script>
+    new Glide('.glide',
+    {
+        type: 'carousel',
+        startAt: 2,
+        perView: 5,
+        focusAt: 'center',
+    })
+    .mount()
+</script>
+</body>
+</html>

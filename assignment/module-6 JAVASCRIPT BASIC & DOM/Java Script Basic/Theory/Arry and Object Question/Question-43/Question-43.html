@@ -1,0 +1,17 @@
+Q.43 Write a JavaScript program to convert an array of objects into CSV string?  
+<script>
+    const itemsArray = 
+    [
+        { itemId: 1, itemRef: "Item 001" },
+        { itemId: 2, itemRef: "Item 002" },
+        { itemId: 3, itemRef: "Item 003" }
+    ];
+
+const csvString = 
+[
+    Object.keys(itemsArray[0]).join(","),
+    ...itemsArray.map(item => Object.values(item).join(","))
+].join("\n");
+
+console.log(csvString);
+</script>

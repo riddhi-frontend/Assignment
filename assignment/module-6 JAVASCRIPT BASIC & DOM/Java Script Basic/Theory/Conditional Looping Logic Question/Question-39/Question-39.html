@@ -1,0 +1,33 @@
+Q.39 Accept 3 numbers from user using while loop and check each numbers palindrome?  
+<script>
+    function isPalindrome(number)
+    {
+        const original = number;
+        let reversed = 0;
+        while (number > 0)
+        {
+            const remainder = number % 10;
+            reversed = reversed * 10 + remainder;
+            number = Math.floor(number / 10);
+        }
+        if(original === reversed)
+        {
+            console.log(`${original} is a palindrome.`);
+        }
+        else
+        {
+            console.log(`${original} is not a palindrome.`);
+        }
+    }
+
+// Accept three numbers from the user
+const num1 = parseInt(prompt('Enter the first number: '));
+const num2 = parseInt(prompt('Enter the second number: '));
+const num3 = parseInt(prompt('Enter the third number: '));
+
+// Check if each number is a palindrome
+isPalindrome(num1);
+isPalindrome(num2);
+isPalindrome(num3);
+
+</script>

@@ -1,0 +1,56 @@
+Q.57 how many type of JS Event? How to use it ?  
+<!-- 
+    1) Mouse Events:
+        click: Fired when the user clicks an element.
+        dblclick: Fired when the user double-clicks an element.
+        mousedown: Fired when the user presses a mouse button.
+        mouseup: Fired when the user releases a mouse button.
+        mouseover: Fired when the user moves the mouse over an element.
+        mouseout: Fired when the user moves the mouse out of an element.
+        mousemove: Fired when the user moves the mouse over an element.
+
+    2) Keyboard Events:
+        keydown: Fired when the user presses a key.
+        keypress: Fired when the user presses a key and it is not a modifier key (e.g., Shift, Ctrl, Alt).
+        keyup: Fired when the user releases a key.
+
+    3) Form Events:
+        submit: Fired when the user submits a form.
+        reset: Fired when the user resets a form.
+        change: Fired when the user changes the value of a form element (e.g., input, select, textarea).
+        input: Fired when the user changes the value of a form element (e.g., input, textarea).
+
+    4) Window Events:
+        load: Fired when the page finishes loading.
+        unload: Fired when the user leaves the page.
+        resize: Fired when the user resizes the window.
+        scroll: Fired when the user scrolls the window.
+
+    5) Touch Events (for mobile devices):
+        touchstart: Fired when the user touches an element.
+        touchmove: Fired when the user moves their finger over an element.
+        touchend: Fired when the user releases their finger from an element.
+
+    6) Animation Events:
+        animationstart: Fired when an animation starts.
+        animationend: Fired when an animation ends.
+        animationiteration: Fired when an animation iteration is completed.
+
+    7) Transition Events:
+        transitionstart: Fired when a transition starts.
+        transitionend: Fired when a transition ends.
+-->
+<html>
+    <button id="btn">Change color</button>
+    <script>
+        const btn = document.querySelector("#btn");
+        function random(number)
+        {
+            return Math.floor(Math.random() * (number + 1));
+        }
+        btn.addEventListener("click", () => {
+            const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+            document.body.style.backgroundColor = rndCol;
+        });
+    </script>
+</html>

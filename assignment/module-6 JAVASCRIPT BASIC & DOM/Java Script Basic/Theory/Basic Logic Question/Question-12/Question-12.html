@@ -1,0 +1,25 @@
+Question-12: WAP to convert years into days and days into years?
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Years to Days and Days to Years Converter</h2>
+<p id="result"></p>
+<script>
+  // Function to convert years into days
+    function yearsToDays(years)
+    {
+        let days = years * 365;
+        return days;
+    }
+  // Function to convert days into years
+    function daysToYears(days)
+    {
+    let years = days / 365;
+    return years;
+    }
+  // Test the functions
+    document.getElementById("result").innerHTML = "5 years is " + yearsToDays(5) + " days.<br>";
+    document.getElementById("result").innerHTML += "365 days is " + daysToYears(365) + " years.";
+</script>
+</body>
+</html>

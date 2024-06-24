@@ -1,0 +1,11 @@
+Question-21: What is the use of Void (0)?
+<!-- 
+    The expression void(0) is commonly used in JavaScript.
+    void(0) is a JavaScript expression that evaluates to undefined.
+    It serves as a placeholder or a way to prevent the default behavior of clicking on a hyperlink.
+    When you encounter a link with href="javascript:void(0)", it essentially does nothing when clicked.
+    Developers often use this technique to create clickable elements (like buttons) that don't navigate to a new page or perform any action.
+    Instead, they can attach custom JavaScript functions to handle specific interactions.
+        Example:<a href="javascript:void(0);" onclick="myFunction()">Click here</a>
+            In this example, when the link is clicked, the myFunction() JavaScript function will be called, but the link won't navigate to a new page or refresh the current page because javascript:void(0); is used as the href attribute. This can be useful when you want to perform some JavaScript action without changing the current page.
+-->

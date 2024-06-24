@@ -1,0 +1,399 @@
+Question:1 What is JavaScript?
+
+<!--
+    javascript is client side scripting language.
+
+    javascript called inside of head and body inside of script tag
+
+    javascript is a case senstive language.
+        examples : document.getElementById("id");
+
+    javascript is used as programming language.
+        examples : 2+2=4 
+
+    javascript manage and maintain by ECM scmascript organizations. 
+
+    javascript is used to load dynamic content inside of broswers.
+
+    javascript called as external javascript inside of <script src="external.js"> </script>
+-->
+
+Question:2 What is the use of isNaN function?
+
+<!--
+    The isNaN() function is a global function in JavaScript that determines whether a value is NaN (Not-a-Number).
+
+    The isNaN() function in JavaScript is used to check if a given value is not a number.
+
+    The isNaN() function returns true if the passed argument is not a number, otherwise it returns false.
+-->
+
+Question:3 What is negative Infinity?
+
+<!--
+    In JavaScript,the value -Infinity represents negative infinity.
+
+    It is a special value that represents the lowest possible number that is less than all other numbers.
+
+    Negative infinity is often used in mathematical operations where there is no result,such as dividing a negative number by zero.In this case, the result is -Infinity.
+-->
+
+Question:4 Which company developed JavaScript?
+
+<!--
+    JavaScript was developed by Netscape Communications Corporation in 1995,as a part of their Netscape Navigator web browser.
+
+    It was originally called "LiveScript",but was later renamed to "JavaScript" to capitalize on the popularity of Java,a programming language developed by Sun Microsystems.
+
+    The development of JavaScript was led by Brendan Eich,who was working at Netscape at the time.
+
+    The language was designed to be easy to learn and use,with a focus on enabling web developers to create dynamic and interactive web pages.
+
+    JavaScript has become one of the most popular programming languages in the world,and is widely used in web development,server-side programming,and mobile application development.
+
+    It is supported by all modern web browsers,and is an essential part of the web development ecosystem.
+-->
+
+Question:5 What are undeclared and undefined variables?
+
+<!--
+    An undeclared variable is a variable that has been used in the code without being declared using the var,let, or const keywords.
+
+    Attempting to use an undeclared variable will result in a runtime error.
+
+    Example:console.log(x); // Uncaught ReferenceError: x is not defined
+
+    An undefined variable,on the other hand,is a variable that has been declared but has not been assigned a value.
+
+    Attempting to use an undefined variable will not result in a runtime error,but the variable will evaluate to the undefined value.
+
+    Example:let x;
+            console.log(x); // undefined
+-->
+
+Question:6 Write the code for adding new elements dynamically?
+
+<!--
+    document.getElementById("addParagraph").addEventListener("click", function() 
+    {
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is a new paragraph!";
+    document.body.appendChild(newParagraph);
+    }
+);
+
+    In this example,we create a new paragraph element using the createElement() method and set its textContent to "This is a new paragraph!".
+
+    We then append the new paragraph to the body element using the appendChild() method.
+-->
+
+Question:7 What is the difference between ViewState and SessionState?
+
+<!--
+    ViewState and SessionState are both state management techniques used in ASP.NET to preserve data across HTTP requests.
+
+    1) ViewState:
+        Maintained at page level; it is specific to a single web page.
+
+        Used to persist the state of controls and values between postbacks on the same page.
+
+        Stored in a hidden field within the page and sent back and forth between the client and server.
+
+        Data is not secure by default but can be encrypted for security.
+
+        ViewState is lost when navigating to a new page12.
+
+    2) SessionState:
+        Maintained at session level; it is specific to a user session and can be accessed across multiple pages.
+
+        Used to store user-specific data on the server, such as user preferences or shopping cart contents.
+
+        Stored on the server, which can be in-memory or in a database, especially useful in web farms or web gardens.
+
+        Data remains available until the session expires, which is typically after a period of inactivity.
+
+        SessionState can be cleared programmatically, by the user, or due to a timeout12.
+
+    In summary,
+        ViewState is ideal for maintaining data within a single page, while SessionState is suitable for maintaining user data across multiple pages in a web application.
+        Both serve to manage state in stateless HTTP protocol, but they do so at different scopes and through different mechanisms
+-->
+
+Question:8 What is === operator?
+
+<!--
+    The === operator is a comparison operator in JavaScript that is used to compare two values for equality.
+
+    It compares the values of two operands without type coercion,meaning that the values being compared must have the same data type.
+
+        condition-1: The same data type and the same value
+            Example: 1 === 1; // true
+                     true === true; // true
+
+        condition-2: The values are different data types, even though they have the same value
+            Example: 1 === "1"; // false ()
+
+        condition-3: The values are different data types and different values
+                    Example: 1 === 2; // false
+
+    When using the === operator,it is important to ensure that the values being compared are the same data type.
+
+    If the values are not the same data type,the === operator will always return false.
+
+    It is important to note that the === operator is not the same as the == operator.
+
+    The == operator is less strict than the === operator
+-->
+
+Question:9 How can the style/class of an element be changed?
+
+<!--
+For style:
+    To change the style of an element, you can use the style property to set one or more CSS properties.
+
+    Example: document.getElementById("myElement").style.color = "blue";
+    //This code sets the text color of the element with the ID "myElement" to blue.
+
+For class:
+    ADD:
+        To add a class to an element, you can use the classList.add() method.
+            Example:document.getElementById("myElement").classList.add("highlight");
+                    //This code adds the class "highlight" to the element with the ID "myElement".
+
+    Remove:
+        To remove a specific class from an element using its name, you can use the classList.remove() method.
+            Example: document.getElementById("myElement").classList.remove("highlight");
+                      //This code removes the class "highlight" from the element with the ID "myElement".
+
+    Toogle:
+        If you want to toggle a class (i.e., if it exists, remove it, otherwise add it)
+            Example: document.getElementById("myElement").classList.toggle("highlight");
+                     //This code toggles the class "highlight" on the element with the ID "myElement".
+-->
+
+Question:10 How to read and write a file using JavaScript?
+
+<!--
+    To read and write files in JavaScript, you can use the built-in fs module in Node.js.
+
+    To reading file:
+        const fs = require('fs');
+        // Read the contents of the file
+        const contents = fs.readFileSync('example.txt', 'utf8');
+        console.log(contents);
+
+            In this example, the readFileSync method is used to read the contents of the file example.txt synchronously.
+            The utf8 argument specifies the encoding of the file.
+            The contents of the file are then logged to the console.
+
+    To Writing file:
+        const fs = require('fs');
+        // Write some data to the file
+        fs.writeFileSync('example.txt', 'Hello, world!');
+        console.log('File written successfully.');
+
+            In this example, the writeFileSync method is used to write the string Hello, world! to the file example.txt synchronously.
+            The console.log statement is then executed to indicate that the file was written successfully.
+
+Note:   that the fs module is not available in client-side JavaScript due to security reasons.
+        Instead, you can use the fetch API or XMLHttpRequest to make HTTP requests to a server and read or write files that way.
+-->
+
+Question:11 What are all the looping structures in JavaScript?
+
+<!--
+    JavaScript provides several looping constructs to iterate over data structures and execute blocks of code.
+
+    Here are the different types of loops in JavaScript:
+
+    1) For loop:
+        This is the most common looping construct,which allows you to iterate over a block of code a specific number of times.
+
+        Ex: for (let i = 0; i < 10; i++)
+            {
+            console.log(i);
+            }
+
+    2) For...in loop:
+        This loop is used to iterate over the properties of an object.
+
+        EX: const obj = {a: 1, b: 2, c: 3};
+            for (let key in obj)
+            {
+            console.log(key, obj[key]);
+            }
+
+    3) For...of loop: 
+        This loop is used to iterate over iterable objects such as arrays, strings, and maps.
+
+        EX: const arr = [1, 2, 3];
+            for (let value of arr)
+            {
+            console.log(value);
+            }
+
+    4) while loop:
+        This loop is used to execute a block of code while a specified condition is true.
+
+        EX: let i = 0;
+            while (i < 5)
+            {
+                console.log(i);
+                i++;
+            }
+
+    5)while loop:
+        This loop is used to execute a block of code while a specified condition is true.
+
+        EX: let i = 10;
+            do
+            {
+            console.log(i);
+            i++;
+            }
+            while (i < 10);
+-->
+
+Question:12 How can you convert the string of any base to an integer in JavaScript?
+
+<!--
+    We can convert a string to an integer by using the parseInt() conversion by default.
+
+    But in other cases when the integer is represented in some other form we also need to pass the base string to decode it into the resultant number.
+
+    Example:
+        <script>
+    let stringConversion = (string_value) => {
+        console.log("Initial Type: " + typeof string_value);
+        let integer_value = parseInt(string_value);
+        console.log("Final Type: " + typeof integer_value);
+        console.log(integer_value);
+    };
+    stringConversion("8475628");
+</script>
+
+output: Initial Type: string
+        Final Type: number
+        8475628
+-->
+
+Question:13 What is the function of the delete operator?
+
+<!--
+    The delete operator is used to delete a property from an object.
+
+    It returns true if the deletion was successful,and false otherwise.
+
+    Example:
+            const obj = {a: 1, b: 2, c: 3};
+            delete obj.a;
+            console.log(obj); // {b: 2, c: 3}
+        In this example,we define an object obj with three properties,a,b and c.
+        We then use the delete operator to remove the a property from the object.
+        When we log the object,we can see that the a property has been removed.
+
+        Note:The delete operator only works on object properties,not on variables or array elements.
+-->
+
+Question:14 What are all the types of Pop up boxes available in JavaScript?
+
+<!--
+    There are three types of pop-up boxes available in JavaScript - alert(), confirm(), and prompt().
+
+        1) Alert() : 
+            This box displays a message for the user's information.
+
+            Once the user clicks OK,the alert box disappears.
+
+            The user can't interact with the page until they dismiss the alert box.
+
+                Ex: alert("This is an alert box!");
+
+        2) Confirm Box: 
+            A confirm box displays a message and two buttons: "OK" and "Cancel". 
+
+            The user can click either button to close the confirm box,and you can use the confirm() function to determine which button the user clicked.
+
+            If the user clicks OK,the result will be true.If the user clicks Cancel,it will be false.
+
+                Ex: const result = confirm("Are you sure you want to continue?");
+                    if (result) 
+                    {
+                    console.log("The user clicked OK.");
+                    }
+                    else
+                    {
+                    console.log("The user clicked Cancel.");
+                    }
+
+        3) Prompt Box:
+            A prompt box displays a message,a text input field, and two buttons: "OK" and "Cancel".
+
+            The user can enter text in the input field and click either button to close the prompt box.
+
+            You can use the prompt() function to get the user's input.
+
+                EX: const userInput = prompt("Please enter your name:");
+                    if (userInput!== null)
+                    {
+                    console.log("Hello, " + userInput + "!");
+                    }
+-->
+
+Question:15 What is the use of Void (0)?
+
+<!--
+    In JavaScript,void is an operator that can be used to explicitly specify that an expression should be evaluated without returning a value.
+
+    It is often used in conjunction with the parentheses operator ( ) to evaluate an expression and discard its result.
+
+    void(0) is a common idiom that is used to create a no-op (no operation) expression in JavaScript.
+
+    It is typically used in situations where a function is expected to return a value, but the value is not needed.
+
+        Example:<button onclick="void(0)">Click me</button>
+            In this example,the onclick attribute is assigned to the void(0) expression.
+
+            When the button is clicked,the expression is evaluated, but it does not return a value.
+
+            This prevents the default behavior of the button,which would be to submit the form or navigate to a new page.
+
+    Note:void(0) is not the same as undefined.
+            undefined is a keyword that represents the absence of a value in JavaScript,while void(0) is an expression that evaluates to undefined.
+
+-->
+
+Question:16 How can a page be forced to load another page in JavaScript?
+
+<!--
+    In JavaScript, you can force a page to load another page using the window.location object.
+    
+        Example of how to redirect to another page:window.location.href = "https://www.google.com";
+
+    If you want to replace the current page history entry with the new URL (not allowing the user to go back to the original page using the back button),you can use:window.location.replace("https://www.google.com");
+
+        Note:The window.location object is a global object that represents the current URL of the page.
+-->
+
+Question:17 What are the disadvantages of using innerHTML in JavaScript?
+
+<!--
+    innerHTML is a property that can be used to get or set the HTML content of an element.
+
+    While it can be a convenient way to manipulate the DOM,there are some potential downsides to using it.
+
+        1) Performance:
+            Setting the innerHTML property can be slower than using other methods,such as textContent or appendChild(),because it involves parsing and rendering the HTML content.
+
+            This can be especially noticeable when dealing with large amounts of HTML content.
+
+            As the browser parses through the HTML,it may take time for the rendering engine to process each piece of markup.
+
+        2) Security: 
+            Using innerHTML can introduce security vulnerabilities,such as cross-site scripting (XSS) attacks.
+
+            This is because it allows for the injection of arbitrary HTML content, which can include malicious scripts.
+
+        3) Readability: 
+            Using innerHTML can make code harder to read and understand,especially when dealing with complex HTML structures.
+-->

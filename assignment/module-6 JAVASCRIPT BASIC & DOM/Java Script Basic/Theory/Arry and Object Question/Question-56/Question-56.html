@@ -1,0 +1,106 @@
+Q.56 Dynamic Form Validation in JS?  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form>
+        <ul>
+            <li>
+                <label for="fName"></label>
+                <input type="text" id="fName" name="fName" placeholder="First Name" required>
+                <p id="fNameError" class="error"></p>
+            </li>
+            <li>
+                <label for="email"></label>
+                <input type="text" id="email" name="email" placeholder="Email Address" required>
+                <p id="emailError" class="error"></p>
+            </li>
+            <li>
+                <label for="password"></label>
+                <input type="text" id="password" name="password" placeholder="Password" required>
+                <p id="passwordError" class="error"></p>
+            </li>
+            <li>
+                <input type="submit" name="submit" id="submit" class="submit">
+            </li>
+        </ul>
+    </form>
+
+    <script>
+        const fNameInput = document.getElementById('fName');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const fNameError = document.getElementById('fNameError');
+        const emailError = document.getElementById('emailError');
+        const passwordError = document.getElementById('passwordError');
+
+    function pswdCheck(inputText, errorElement)
+    {
+        if (!/(?=.*\d)/.test(inputText))
+        {
+            errorElement.textContent = 'Password must contain at least one digit';
+            errorElement.style.display = 'block';
+        }
+        else if (!/(?=.*[a-z])/.test(inputText))
+        {
+            errorElement.textContent = 'Password must contain at least one lowercase letter';
+            errorElement.style.display = 'block';
+        }
+        else if (!/(?=.*[A-Z])/.test(inputText))
+        {
+            errorElement.textContent = 'Password must contain at least one uppercase letter';
+            errorElement.style.display = 'block';
+        }
+        else if (!/[a-zA-Z0-9]{8,}/.test(inputText))
+        {
+            errorElement.textContent = 'Password must contain at least 8 characters';
+            errorElement.style.display = 'block';
+        }
+        else
+        {
+            errorElement.style.display = 'none';
+        }
+    }
+
+    function emailCheck(inputText, errorElement)
+    {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputText))
+        {
+            errorElement.textContent = 'Invalid email address';
+            errorElement.style.display = 'block';
+        }
+        else
+        {
+            errorElement.style.display = 'none';
+        }
+    }
+
+    fNameInput.addEventListener('input', () => {
+        if (fNameInput.value === '')
+        {
+            fNameError.textContent = 'First name is required';
+            fNameError.style.display = 'block';
+        }
+        else
+        {
+            fNameError.style.display = 'none';
+        }
+    });
+
+    emailInput.addEventListener('input', () => {
+        emailCheck(emailInput.value, emailError);
+    });
+
+    passwordInput.addEventListener('input', () => {
+        pswdCheck(passwordInput.value, passwordError);
+    });
+    </script>
+</body>
+</html>

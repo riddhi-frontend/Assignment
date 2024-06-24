@@ -1,0 +1,24 @@
+Q.38 Use pattern in console.log in JS? 
+2)  A  
+    B C 
+    D E F 
+    G H I J  
+    K L M N O
+<script>
+    function printPattern(rows)
+    {
+    let currentChar = 'A';
+    for (let i = 1; i <= rows; i++)
+    {
+        let line = "";
+        for (let j = 1; j <= i; j++)
+        {
+            line += currentChar + " ";
+            currentChar = String.fromCharCode(currentChar.charCodeAt(0) + 1);
+        }
+        console.log(line);
+    }
+    }
+const numRows = 5;
+printPattern(numRows);
+</script>

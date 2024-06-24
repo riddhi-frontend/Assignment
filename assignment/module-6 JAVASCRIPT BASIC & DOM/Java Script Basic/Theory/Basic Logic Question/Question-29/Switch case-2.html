@@ -1,0 +1,22 @@
+Question-29: Write to show
+    ii. Vowel or Consonant using switch case in JS?
+<script>
+    function isVowelOrConsonant(char)
+    {
+        switch (char.toLowerCase())
+        {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                return "Vowel";
+            default:
+                return "Consonant";
+        }
+    }
+
+const inputChar = 'G';
+const result = isVowelOrConsonant(inputChar);
+console.log(`The character "${inputChar}" is a ${result}.`);
+</script>

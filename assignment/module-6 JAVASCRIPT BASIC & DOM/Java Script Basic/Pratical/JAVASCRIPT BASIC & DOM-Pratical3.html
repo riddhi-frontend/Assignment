@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet for Information Technology</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .marksheet-container
+        {
+            width: 500px;
+            height: 480px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 3px solid;
+        }
+        .marksheet-container h1
+        {
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+        .marksheet-container p
+        {
+            margin-bottom: 25px;
+            font-size: 21px;
+            text-align: center;
+        }
+        #marksheet-form label
+        {
+            display: inline-block;
+            width: 150px;
+            text-align: left;
+            margin-right: 25px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        #marksheet-form  input[type="number"]
+        {
+            width: 230px;
+            margin-left: 40px;
+        }
+        button
+        { 
+            width: 130px;
+            height: 35px;
+            padding: 10px; 
+            margin-left: 41%;
+            background-color: #D6D6D6;
+            text-align: center;
+            border: 1px solid;
+            margin-bottom: 3%;
+        }
+        .final
+        {
+            display: inline;
+            width: 40%;
+            margin-left: 5%;
+            margin-top: 3%;
+            margin-right: 8%;
+            font-size: 22px;
+        }
+        .final input
+        {
+            width: 50px;
+            color: blue;
+            font-size: 22px;
+            text-align: end;
+            border: none;
+        }
+        .percentage
+        {
+            display: inline;
+            width: 40%;
+            margin-left: 5%;
+            margin-top: 3%;
+            margin-right: 3%;
+            font-size: 22px;
+        }
+        .percentage input
+        {
+            width: 50px;
+            color: blue;
+            font-size: 22px;
+            text-align: end;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="marksheet-container">
+        <h1>Marksheet for Information Technology</h1>
+        <p>Enter Marks</p>
+        <form id="marksheet-form">
+            <div>
+                <label name="c-language">1. C Language</label>
+                <input type="number" id="clanguage" value="">
+            </div>
+            <div>
+                <label for="c-plus-language">2. C++ Language</label>
+                <input type="number" id="cpluslanguage" name="c-plus-language" value="">
+            </div>
+            <div>
+                <label for="database">3. Database</label>
+                <input type="number" id="database" name="database" value="">
+            </div>
+            <div>
+                <label for="html">4. HTML</label>
+                <input type="number" id="html" name="html" value="">
+            </div>
+            <div>
+                <label for="css">5. CSS</label>
+                <input type="number" id="css" name="css" value="">
+            </div>
+            <div>
+                <label for="php">6. PHP</label>
+                <input type="number" id="php" name="php" value="">
+            </div>
+            <div>
+                <label for="core-java">7. Core Java</label>
+                <input type="number" id="corejava" name="core-java" value="">
+            </div>
+
+            <div>
+                <button type="button" id="btn" value="Result" onclick="finalResult()">Result</button>
+            </div>
+        </form>
+
+        <div class="final"> 
+            <label>Total is: </label> 
+            <input type="totalmarks" name="number" value="" id="total marks" >/350
+        </div> 
+
+        <div class="percentage"> 
+            <label>Percentage is: </label> 
+            <input type="percentage" name="number" value="" id="total per" >%
+        </div> 
+
+    <script> 
+        function finalResult() { 
+        const totalMarks = document.getElementById('total marks'); 
+
+        const totalPer = document.getElementById('total per'); 
+
+        const total = parseInt(clanguage.value) + parseInt(cpluslanguage.value) + parseInt(database.value) + parseInt(html.value) + parseInt(css.value) + parseInt(php.value) + parseInt(corejava.value); 
+
+        totalMarks.value = total; 
+        const percentage = (total / 350) * 100; 
+        totalPer.value = percentage.toFixed(2); 
+        }
+    </script>
+</body>
+</html>

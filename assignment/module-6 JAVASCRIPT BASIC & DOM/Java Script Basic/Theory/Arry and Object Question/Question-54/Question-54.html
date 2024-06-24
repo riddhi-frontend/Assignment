@@ -1,0 +1,23 @@
+Q.54 Form Validtion in JS?  
+<!-- 
+    Form validation in JavaScript is the process of checking whether the user input in a form is valid or not before submitting it to the server.
+-->
+<html>
+    <form id="myForm">
+        <input type="text" name="username" placeholder="enter username hear">
+        <input type="submit">
+    </form>
+    <script>
+        const form = document.getElementById("myForm");
+        const username = document.querySelector("#myForm input[name=username]");
+        form.addEventListener("submit", function(event)
+        {
+            if (username.value.length < 5)
+            {
+                alert("Username must be at least 5 characters long.");
+                event.preventDefault();
+            }
+        });
+    </script>
+</html>
+<!-- you can also use JavaScript library for form validation -->

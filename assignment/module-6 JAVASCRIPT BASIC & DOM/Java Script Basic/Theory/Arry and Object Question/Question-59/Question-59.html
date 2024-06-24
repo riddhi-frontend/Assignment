@@ -1,0 +1,29 @@
+Q.59 What is Bom vs Dom in JS?  
+<!-- 
+    Differences between the Document Object Model (DOM) and the Browser Object Model (BOM) in JavaScript:
+        1) Document Object Model (DOM):
+            The DOM provides a programming interface for HTML and XML documents.
+            It allows you to create, manipulate, or delete elements within a document.
+            Represents the logical structure of documents (HTML or XML).
+            Allows easy access and manipulation of tags, IDs, classes, attributes, and elements in a structured hierarchy.
+            Provides methods like getElementById(), getElementsByClassName(), getElementsByName(), getElementsByTagName(), querySelector(), and querySelectorAll() for element manipulation.
+                Example: using getElementById()
+                        <img id="image">
+                        <button onclick="show()">Show Image</button>
+                        <script>
+                        function show()
+                        {
+                            let image = document.getElementById("image");
+                            image.src = "https://th.bing.com/th/id/OIP.DpcLyyRCeTWoiiMNdCTXxQHaEK?rs=1&pid=ImgDetMain";
+                            document.getElementById("btnID").style.display = "none";
+                        }
+
+        2) Browser Object Model (BOM):
+            The BOM refers to browser-specific objects exposed by the web browser. It allows JavaScript to interact with the browser itself.
+            Includes objects like navigator, history, screen, location, and document.
+            Enables interaction with browser features (e.g., controlling the window, managing history, accessing screen properties).
+                Example: using BOM (navigator object)
+                        const browserName = navigator.userAgent;
+                        console.log("Browser name:", browserName);
+    Note: DOM deals with document structure and elements, while the BOM provides access to browser-specific features. Both are essential for web development! 
+-->

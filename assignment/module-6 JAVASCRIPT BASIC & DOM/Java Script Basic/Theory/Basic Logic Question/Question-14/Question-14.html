@@ -1,0 +1,22 @@
+Question-14: Write a JavaScript exercise to get the extension of a filename.?
+<script>
+    function getExtension(filename)
+    {
+        // Use the 'split' method to split the filename into an array of strings,
+        // using the '.' character as the separator.
+    let parts = filename.split('.');
+
+    // If the filename has no extension, return an empty string.
+        if (parts.length === 1)
+        {
+            return '';
+        }
+    // Return the last element of the array, which is the file extension.
+        return parts[parts.length - 1];
+    }
+
+// Example usage:
+let filename = "example.html";
+let extension = getExtension(filename);
+console.log(`The extension of the file is:.${extension}`);
+</script>
