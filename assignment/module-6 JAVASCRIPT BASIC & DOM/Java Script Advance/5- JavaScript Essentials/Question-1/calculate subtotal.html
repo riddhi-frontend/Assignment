@@ -1,0 +1,126 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>sub total using javascript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+
+    <style>
+        .list
+        {
+            margin: auto;
+            margin-top: 5%;
+            height: 500px;
+            width: 70%;
+            border: 2px solid black;
+            box-shadow: 5px 5px 8px 8px lightgrey;
+        }
+        .sublist
+        {
+            height: 400px;
+            width: 84%;
+            border: 2px solid black;
+            margin-left : 8% !important;
+            margin-top: 5%;
+        }
+        table, th, td
+        {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td
+        {
+            padding: 25px;
+        }
+        .price
+        {
+            width: 10%;
+        }
+        .sub
+        {
+            width: 11%;
+        }
+        input
+        {
+            height: 35px;
+            font-size: 14px;
+        }
+        button
+        {
+            padding: 8px;
+            background-color: darkorange;
+            border-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="list">
+        <table class="sublist">
+            <thead>
+            <tr>
+                <th>Product info</th>
+                <th class="qty">Quantity</th>
+                <th class="price">Price (per unit)</th>
+                <th class="sub">price<br>(sub total)</th>
+                <th></th>
+            </tr>
+            </thead>
+
+        <tbody>
+            <tr>
+                <td>Fortunata Window Hardware-Decorative Holdbacks - Mocha</td>
+                <td><input type="number" value="" /></td>
+                <!-- <td id="subtotal-1">$59.98</td> -->
+                <td>$29.99</td>
+                <td class="sub"></td>
+                <td><button type="button" class="remove">Remove</button></td>
+            </tr>
+                <tr>
+                    <td>Woven Trellis Window Hardware - Clip Rings - Bronze</td>
+                    <td><input type="number" value="" /></td>
+                    <!-- <td id="subtotal-2">$12.99</td> -->
+                    <td>$12.99</td>
+                    <td class="sub"></td>
+                    <td><button type="button" class="remove">Remove</button></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="sub">1</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+    </script>
+<!-- 
+    <script>
+        $(document).ready(function(){
+            update_amounts();
+            $(`.qty, .price`).on ('keyup keypress blur change',
+                function(e){
+                    update_amounts();
+                });
+        });
+
+        function update_amounts(){
+            var sum = 0.0;
+            $('#myTable > tbody >tr').each(function(){
+                var qty = $(this).find('.qty').val();
+                var price = $(this).find('.price').val();
+                var amount = (qty*price)
+                sum+=amount;
+                $(this).find('.amount').text(''+amount);
+            });
+            $('#total').text(sum);
+        }
+    </script> -->
+</body>
+</html>
