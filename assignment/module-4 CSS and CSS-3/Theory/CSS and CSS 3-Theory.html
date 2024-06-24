@@ -1,0 +1,381 @@
+Question-1: What are the benefits of using CSS? 
+<!--
+Advantages of CSS:
+
+    CSS plays an important role, by using CSS you simply got to specify a repeated style for element once & use it multiple times as because CSS will automatically apply the required styles.
+
+    CSS changes are device friendly. With people employing a batch of various range of smart devices to access websites over the web, there’s a requirement for responsive web design.
+
+    Ease of maintenance:
+        By using external style sheets, you can make changes to the styles of an entire website by modifying just one file. This reduces the effort and time required for maintenance.
+
+    Consistency:
+        CSS enables consistent styling across an entire website or multiple pages. One instruction can control several areas which is advantageous.
+
+    Reduced file size:
+        External style sheets can reduce the size of HTML files, making them faster to load.
+
+    Better organization:
+        External style sheets allow you to separate the presentation of a website from its content, making it easier to read and maintain the HTML code.
+
+    More control:
+        External style sheets have higher priority than internal or inline styles, allowing you to override styles defined elsewhere.
+-->
+
+Question-2: What are the disadvantages of CSS?
+<!--
+Disadvantages of CSS:
+
+    Caching issues:
+        If the user's browser has already cached the CSS file, it may not download the updated version, resulting in inconsistent styles across different pages.
+
+    Dependency:
+        External style sheets are dependent on the availability of the CSS file. If the file is missing or inaccessible, the styles will not be applied.
+
+        After making the changes we need to confirm the compatibility if they appear.
+
+    Lack of security:
+        CSS itself does not provide any security features, and can be easily modified by anyone with access to the source code.
+
+    Learning curve:
+        CSS can be difficult to learn, especially for beginners, and requires a good understanding of HTML and web design principles.
+
+    Browser compatibility:
+        (some styles sheet are supported and some are not)
+        CSS works differently on different browsers.IE and Opera supports CSS as different logic.
+        There might be cross-browser issues while using CSS.
+
+    The programming language world is complicated for non-developers and beginners. Different levels of CSS i.e. CSS, CSS 2, CSS 3 are often quite confusing.
+-->
+
+Question-3: What is the difference between CSS2 and CSS3?
+<!--
+    CSS2 was released in 1998 and is considered to be a stable and mature version of the language.It includes features such as support for media types, cascading and inheritance, and selectors.
+
+    CSS3 has the capability to split text sections into multiple columns so that it can be read like a newspaper.In CSS2, the developers had difficulty because the standard was not equipped with automatically breaking the text so that it fits within a box.
+
+    CSS3,on the other hand,is the latest version of the language and was first introduced in 1999.
+
+    CSS3 is divided into many different documents called Modules.
+
+    Every module adds new capability or extends features defined in CSS2 over preserving backward compatibility.
+
+    Work on CSS3 started around the time of publication of the original CSS2 recommendation.
+
+    The CSS3 version supports many more browsers than CSS2.
+
+    CSS3 introduces several new selectors, properties, and values, and includes support for animations, transitions, and other advanced features.
+        Some of the new features in CSS3 include:
+            Media queries: Allows you to apply different styles based on the characteristics of the device or browser being used to view the page.
+            Border-radius: Allows you to create rounded corners on elements.
+
+            Box-shadow: Allows you to add shadows to elements.
+
+            Text-shadow: Allows you to add shadows to text.
+
+            RGBA and HSLA colors: Allows you to specify colors using transparency.
+
+            Multiple backgrounds: Allows you to use multiple background images on an element.
+
+            Transforms: Allows you to rotate, scale, skew, or translate elements.
+
+            Transitions: Allows you to create smooth transitions between different states of an element.
+
+            Animations: Allows you to create complex animations using keyframes.
+-->
+
+Question-4: Name a few CSS style components
+<!--
+A few CSS style components are:
+
+    Selectors: These are the elements that point to the HTML elements that need to be styled.
+            For example, p is a selector that targets all the paragraph elements in a web page.
+
+    Declarations: These are the rules that define how the selected elements should be styled. They consist of a property and a value,separated by a colon.
+            For example, color: red; is a declaration that sets the text color to red.
+
+    Properties: These are the specific aspects of the selected elements that can be styled. 
+            For example, color, font-size, margin, border, etc. are some of the properties that can be used in CSS.
+
+    Values: These are the assigned values for the properties that determine how they will affect the selected elements.
+            For example, red, 16px, 10px, solid, etc. are some of the values that can be used in CSS.
+-->
+
+Question-5: What do you understand by CSS opacity?
+<!--
+    The opacity property sets the opacity level for an element.
+
+    The opacity in CSS is the property of an element that describes the transparency of the element.
+
+    It is the opposite of transparency & represents the degree to which the content will be hidden behind an element.
+-->
+
+Question-6: How can the background color of an element be changed?
+<!--
+    The background-color property sets the background color of an element.
+
+    The background of an element is the total size of the element, including padding and border (but not the margin).
+
+    example: How to use the background-color property to set the background color of a <div> element:
+        div
+        {
+            background-color: lightblue;
+        }
+    This sets the background color of the <div> element to light blue.You can replace lightblue with any other color value, such as red,etc..
+-->
+
+Question-7: How can image repetition of the backup be controlled?
+<!--
+    To control the repetition of an image in CSS, you can use:
+
+    A].repeat: 
+            The image is repeated both horizontally and vertically.
+                For example:
+                    body
+                    {
+                        background-image: url("imaes/1.jpg");
+                        background-repeat: repeat;
+                    }
+
+    B].repeat-x: 
+            The image is repeated only horizontally.
+                For example:
+                    body
+                    {
+                        background-image: url("imaes/1.jpg");
+                        background-repeat: repeat-x;
+                    }
+
+    C].repeat-y: 
+            The image is repeated only vertically.
+                For example:
+                    body
+                    {
+                        background-image: url("imaes/1.jpg");
+                        background-repeat: repeat-y;
+                    }
+
+    D].no-repeat:
+            The image is not repeated.
+                For example:
+                    body
+                    {
+                        background-image: url("imaes/1.jpg");
+                        background-repeat: norepeat;
+                    }
+
+-->
+
+Question-8: What is the use of the background-position property?
+<!--
+    The background-position property sets the starting position of a background image.
+
+    By default, a background-image is placed at the top-left corner of an element,and repeated both vertically and horizontally. 
+        For example:
+            body 
+            {
+                background-image: url('w3css.gif');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+                background-color: pink;
+            }           
+-->
+
+Question-9: Which property controls the image scroll in the background?
+<!--
+    The property that controls the image scroll in the background is background-attachment. This property can have one of the following values:
+
+        scroll: The background image scrolls with the page. This is the default value.
+
+        fixed: The background image is fixed relative to the viewport and does not scroll with the page.
+
+        local: The background image scrolls with the element’s contents.
+
+        initial: Sets this property to its default value.
+
+        inherit: Inherits this property from its parent element.
+-->
+
+Question-10: Why should background and color be used as separate properties?
+<!--
+    There are two main reasons why background and color should be used as separate properties in CSS.
+
+        First,the background property is complex and combining it with color would make it even more complex.
+
+        Second, color is an inherited property while background is not. Combining them could lead to confusion.
+-->
+
+Question-11: How to center block elements using CSS1?
+<!--
+    To center block elements using CSS1,you can use the margin property with the value auto for both left and right margins.This will automatically adjust the margins such that the block element is placed in the center of its container.
+        For example:
+            div 
+            {
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+    This will center a div element with a width of 50% of its container.
+    
+    **Note: You need to specify a width for the block element, otherwise it will take up the full width of its container by default.
+-->
+
+Question-12: How to maintain the CSS specifications?
+<!--
+    To maintain the CSS specifications, the World Wide Web Consortium (W3C) is responsible for developing and publishing the CSS specifications.
+
+    The W3C is an international community that develops open standards for the web, including HTML, CSS, and other technologies.
+
+    The CSS Working Group is responsible for developing new CSS features.
+
+    If there are two or more CSS rules that point to the same element,the selector with the highest specificity value will "win",and its style declaration will be applied to that HTML element.
+    For example: 
+        A class selector (named "test"),and specified a green color for this class.
+        
+        The text will now be green (even though we have specified a red color for the element selector "p").
+        
+        This is because the class selector is given higher priority:
+            <html>
+            <head>
+                <style>
+                .test {color: green;}
+                p {color: red;}
+                </style>
+            </head>
+            <body>
+            <p class="test">Hello World!</p>
+            </body>
+            </html>
+-->
+
+Question-13: What are the ways to integrate CSS as a web page?
+<!--
+    There are four ways to integrate CSS into a web page:
+
+        A). Inline CSS: Styles added directly to the HTML element using the style attribute.
+
+        B). Internal CSS: Styles defined inside the <head> section of the HTML document using the <style> element.
+
+        C). External CSS: Styles defined in a separate file and linked to the HTML document using the <link> element.
+-->
+
+Question-14: What is embedded style sheets?
+<!--
+    An Embedded Style Sheet is a style sheet where designers can embed information of the style sheet in an HTML document by making use of the element.
+
+    This embedding of style sheet info within tags is done within the head section of HTML.
+
+    The embedded style sheet is a way of specifying the CSS style language in the HTML document.
+
+    The CSS syntax for embedded style sheets is exactly the same as other CSS code.
+
+        For example:
+            <!DOCTYPE html> 
+            <html> 
+            <head> 
+                <title>Page Title</title> 
+                <!- Embedded stylesheet ->
+                <style> 
+                    h2
+                    { 
+                        font-size: 15px; 
+                        text-align: center; 
+                    }
+                    p
+                    { 
+                        font-size: 20px; 
+                    } 
+                </style> 
+            </head> 
+            <body> 
+                <h2>Welcome To GFG</h2> 
+                <p>This document is using an embedded stylesheet!</p> 
+                <p>This is a paragraph</p> 
+            </body> 
+            </html>
+-->
+
+Question-15: What are the external style sheets?
+<!--
+    External style sheets are separate files that contain CSS rules for styling HTML elements. 
+
+    They have a .css extension and do not contain any HTML tags.
+
+    They are linked to one or more HTML pages using the <link> element inside the <head> section.
+
+    They allow you to change the look of an entire website by modifying just one file.
+
+    They have higher priority than internal or inline styles, unless the latter use the !important declaration.
+-->
+
+Question-16: What are the advantages and disadvantages of using external style sheets?
+<!--
+    External style sheets have several advantages and disadvantages:
+
+Advantages:
+
+    Reusability: External style sheets can be used across multiple HTML pages, making it easier to maintain a consistent look and feel across an entire website.
+
+    Ease of maintenance: By using external style sheets, you can make changes to the styles of an entire website by modifying just one file.
+
+    Reduced file size: External style sheets can reduce the size of HTML files, making them faster to load.
+
+    Better organization: External style sheets allow you to separate the presentation of a website from its content, making it easier to read and maintain the HTML code.
+
+    More control: External style sheets have higher priority than internal or inline styles, allowing you to override styles defined elsewhere.
+
+Disadvantages:
+
+    Additional HTTP request: External style sheets require an additional HTTP request to download the CSS file, which can slow down the loading time of a web page.
+
+    Caching issues: If the user’s browser has already cached the CSS file, it may not download the updated version, resulting in inconsistent styles across different pages.
+
+    Dependency: External style sheets are dependent on the availability of the CSS file. If the file is missing or inaccessible, the styles will not be applied.
+
+    Compatibility issues: Different browsers may interpret CSS rules differently, leading to inconsistencies in the appearance of a website across different browsers.
+
+        Overall, external style sheets are a powerful tool for creating consistent and maintainable websites, but they do have some drawbacks that should be taken into consideration when designing a website
+-->
+
+Question-17: What is the meaning of the CSS selector?
+<!--
+    A CSS selector is a pattern used to select the HTML elements that you want to style. 
+
+    CSS selectors can be based on element names, attributes, classes, ids, or relationships between elements.
+
+    CSS selectors are used to "find" (or select) the HTML elements you want to style.
+-->
+
+Question-18: What are the media types allowed by CSS?
+<!--
+    The following media types are allowed by CSS:
+
+        all: Suitable for all devices.
+
+        print: Intended for paged material and documents viewed on a screen in print preview mode.
+
+        screen: Intended primarily for color computer screens.
+
+        speech: Intended for speech synthesizers.
+-->
+
+Question-19: What is the rule set?
+<!--
+    A CSS rule set is a collection of one or more selectors and one or more declarations.
+
+    The selectors point to the HTML elements that need to be styled, while the declarations define how the selected elements should be styled.
+
+    A declaration consists of a property and a value, separated by a colon. Multiple declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+    
+        For example:
+            <style>
+            h1
+            {
+                color: red;
+                font-size: 36px;
+            }
+            </style>
+        In this example, h1 is the selector that targets all the <h1> elements in the HTML document.The declarations inside the curly braces define the styles for the selected elements.The color property sets the text color to red, while the font-size property sets the font size to 36 pixels.
+-->

@@ -1,0 +1,191 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #FBFAFE;
+}
+.container
+{
+    background-color: #796EFF;
+    color: whitesmoke;
+    border-radius: 14px;
+    height: 150px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.container img
+{
+    width: 40%;
+    height: 90px;
+    margin-top: 5%;
+    padding: 0%;
+}
+.offer
+{
+    display: inline !important;
+}
+.btn-2
+{
+    background-color: #81C43B;
+    border: none;
+    border-radius: 25px;
+    padding: 5px;
+    width: 13% !important;
+    margin-top: 3% !important;
+}
+.btn-3
+{
+    background-color: #F2F9EB;
+    border: none;
+    border-radius: 25px;
+    padding: 5px;
+    width: 22% !important;
+}
+.para
+{
+    text-align: center;
+    margin-top: 5%;
+}
+.graph
+{
+    margin-left: 14%;
+    height: 650px;
+}
+.scocial-media img
+{
+    width: 150px;
+}
+.review
+{
+    margin-left: 5%;
+    margin-right: 4%;
+}
+.review img
+{
+    margin-top: 5%;
+    margin-left: 6%;
+}
+footer
+{
+    background-color: #1D2830;
+    color: whitesmoke;
+}
+footer ul li
+{
+    list-style: none;
+    list-style-type: none;
+}
+footer ul li a
+{
+    text-decoration: none;
+    color: whitesmoke;
+}
+footer img
+{
+    width: 190px;
+    height: 130px;
+}
+.socialmedia
+{
+    margin-left: 8%;
+}
+/* add media query for mobile */
+@media only screen and (min-width:320px) and (max-width:490px)
+{
+    body
+    {
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .container
+    {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .container img
+    {
+        width: 100%;
+        height: 100px;
+        margin-top: 5%;
+        padding: 0%;
+    }
+    .container .row
+    {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .container .row .col-md-4
+    {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .container .row .col-md-4 .card
+    {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .container .row .col-md-4 .card .card-body
+    {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .btn-1
+    {
+        display: flex;
+        margin-top: 15px;
+        margin-left: 5%;
+    }
+    .btn-2
+    {
+        display: none !important;
+    }
+    .btn-3
+    {
+        width: 80% !important;
+        margin-left: -25%;
+    }
+    .para
+    {
+        width: 70%;
+        text-align: left;
+        margin-left: 20%;
+    }
+    .graph
+    {
+        width: 100%;
+    }
+    .review
+    {
+        width: 70% !important;
+        /* margin-left: -5% !important; */
+    }
+    .work img
+    {
+        width: 70% !important;
+    }
+    .footer
+    {
+        width: 100%;
+    }
+    .employee
+    {
+        width: 100% !important;
+        height: 350px;
+        margin-left: 0%;
+        border-radius: none !important;
+    }
+    .employee img
+    {
+        display: none;
+    }
+}
