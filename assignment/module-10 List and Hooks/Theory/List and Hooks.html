@@ -1,0 +1,100 @@
+Question-1: Explain Life cycle in Class Component and functional component with Hooks.
+Answer:
+<!-- 
+    1. Class Component:
+        Class-based components have methods like shouldComponentUpdate, getSnapshotBeforeUpdate, componentDidUpdate to handle this phase.
+            A) Mounting:
+                This phase occurs when a new component is created and inserted into the DOM (i.e., when the component’s life begins).
+                It happens only once during the initial render.
+                Key methods involved in this phase (for class-based components) are:
+                    constructor():
+                        The first method called during mounting. This is where you initialize the state and binds event-handler methods.
+                    static getDerivedStateFromProps():
+                        This method is called right before rendering, allowing you to update the state based on changes in props.
+                    render():
+                        This is where you define the component's UI.
+                    componentDidMount():
+                        This method is called after the component is mounted to the DOM. It's a good place to set up event listeners, fetch data, or perform any other side effects.
+
+            B) Updating:
+                This phase occurs when the component updates or re-renders.It’s triggered when props or state change.
+                static getDerivedStateFromProps():
+                    This method is called again if the component's props change.
+                shouldComponentUpdate():
+                    This method is called before the component is rendered, allowing you to optimize rendering by returning false if the component doesn't need to be updated.
+                render():
+                    This method is called again if the component is re-rendered.
+                getSnapshotBeforeUpdate():
+                    This method is called right before the most recent update is committed to the DOM, allowing you to capture some information from the DOM before it changes.
+                componentDidUpdate():
+                    This method is called after the component is updated. It's a good place to perform any side effects based on the component's updated state.
+
+            c) Unmounting:
+                componentWillUnmount():
+                    This method is called right before the component is unmounted from the DOM. It's a good place to clean up any resources, such as event listeners or timers.
+
+    2. Functional Component with Hooks
+        For functional components, we use Hooks to achieve similar behavior. Specifically, the useEffect Hook allows us to perform side effects (like fetching data) after rendering2.
+            A)Mounting:
+                useState(): This hook is used to add state to a functional component.
+                useEffect(): This hook is used to perform side effects, such as fetching data or setting up event listeners.
+
+            B)Updating
+                useState(): This hook is used to update state.
+                useEffect(): This hook is used to perform side effects based on the updated state.
+
+            C)Unmounting
+                useEffect(): This hook can be used with a return function to perform cleanup when the component is unmounted.
+    Here's an example of a functional component with hooks that implements the lifecycle methods of a class component:
+    import React, { useState, useEffect } from 'react';
+        function Example() {
+        const [count, setCount] = useState(0);
+        const [name, setName] = useState('');
+            // Mounting
+                useEffect(() => {
+                console.log('Component mounted');
+            // Fetch data
+                fetchName();
+            // Set up event listener
+                window.addEventListener('resize', handleResize);
+            // Clean up
+                return () => {
+                console.log('Component will unmount');
+                window.removeEventListener('resize', handleResize);
+                };
+                }, []);
+            // Updating
+                useEffect(() => {
+                console.log(`Count updated to ${count}`);
+                }, [count]);
+            // Lifecycle methods
+                const fetchName = async () => {
+                const response = await fetch('https://api.example.com/name');
+                const data = await response.json();
+                setName(data.name);
+                };
+                const handleResize = () => {
+                console.log('Window resized');
+                };
+            return (
+                <div>
+                    <p>Count: {count}</p>
+                        <button onClick={() => setCount(count + 1)}>Increment</button>
+                        <p>Name: {name}</p>
+                    </div>
+            );
+        }
+    export default Example;
+
+    In this example, the useEffect hook is used to perform side effects, such as fetching data and setting up event listeners. The useState hook is used to add state to the component. The return function in the first useEffect hook is used to clean up resources when the component is unmounted.
+-->
+
+<!-- 
+    React Hooks
+        React Hooks allow functional components to use state and lifecycle features. Here are some commonly used Hooks:
+            useState: Manages component state.
+            useEffect: Handles side effects (e.g., fetching data, subscribing to events) after rendering.
+            useContext: Accesses context data.
+            useReducer: Manages complex state logic.
+            useMemo and useCallback: Optimize performance by memoizing values and functions.
+-->

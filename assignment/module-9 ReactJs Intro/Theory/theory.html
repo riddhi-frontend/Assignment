@@ -1,0 +1,169 @@
+Question-1: What is React Js?
+<!-- 
+    React (also known as ReactJS) is a popular JavaScript library developed by Facebook for building user interfaces on the web.
+    It is used for developing single-page applications.
+    React is used for handling the view layer for web and mobile apps.
+    React allows us to create reusable UI components.
+    React is used to build large-scale single-page applications.
+    React is used to build large-scale single-page applications.
+        Example:
+            function Welcome(props)
+            {
+                return <h1>Hello, {props.name}</h1>;
+            }
+            const element = <Welcome name="Sara" />;
+            ReactDOM.render(
+                element,
+                document.getElementById('root')
+                );
+        // Output: Hello, Sara
+-->
+
+Question-2: What is NPM in React Js?
+<!-- 
+    NPM stands for Node Package Manager, which is the world's largest software registry and package manager.
+    It's a crucial tool for managing dependencies in React JS projects.
+    In React JS, NPM is used to download and install JavaScript packages from the Node Package Manager registry.
+    These packages can be libraries, frameworks, or tools that help with development, testing, and deployment.
+    When you create a new React JS project, you'll typically have a package.json file that lists the project's dependencies.
+    You can use NPM to install these dependencies by running the command npm install in the project directory.
+    npm run build to create a minified production bundle.
+-->
+
+Question-3: What is Role of Node Js in react Js?
+<!-- 
+    Node.js plays a crucial role in React JS development by handling the backend data, while React JS is mainly used to develop frontend UI components. 
+    Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+    It is used to run JavaScript code on the server-side.
+    Node.js is used to build server-side applications in React JS.
+    They improve productivity, reduce development time, and offer a perfect framework for building websites that are instantly useful and easy to manage.
+    Node.js enables creating JSON APIs for the web, managing real-time data, and balancing heavy server demand, making it a popular choice for web development projects.
+-->
+
+Question-4: What is CLI command In React Js?
+<!-- 
+    CLI stands for Command Line Interface.
+    It is a text-based interface that allows users to interact with a computer system or application through a command line.
+    It is a tool that helps developers to quickly set up a React JS project and manage its dependencies.
+    The CLI provides a set of commands that can be used to create a new project, install dependencies, run tests, and build the project.
+    In React JS, the term "CLI command" typically refers to commands used in the command line interface (CLI) for managing and setting up React projects.
+    One popular CLI command in React JS is npx create-react-app my-app, which creates a new React project called "my-app".
+        Note:that npx is a package runner tool that comes with npm.
+            It allows you to run packages without having to install them globally.
+            create-react-app is a package that provides a convenient way to create new React projects with a standard project structure and configuration.
+-->
+
+Question-5: What is Components in React Js?
+<!-- 
+    Components can be nested inside other components, allowing for complex UIs to be built from simple, reusable parts.
+    This modular approach to UI development makes React JS a powerful and flexible framework for building web applications.
+
+    Components can be classified into two types: functional components and class components.
+        1) Functional components:
+            Functional components are simple JavaScript functions that take in props as arguments and return a React element.
+            They are easier to write and read, and are preferred for simple UI elements.
+                Example:
+                    function Welcome(props)
+                    {
+                        return <h1>Hello, {props.name}</h1>;
+                    }
+
+        2) Class components:
+            Class components are more complex and can have their own state and lifecycle methods.
+            They are useful for more complex UI elements that require more advanced behavior.
+                    Example:
+                        function App()
+                        {
+                            return <Greeting name="John" />;
+                        }
+    When the App component is rendered, it will display the Greeting component with the name "John", resulting in a greeting message of "Hello, John!".
+-->
+
+Question-6: What is Header and Content Components in React Js?
+<!-- 
+    In React JS, components are the building blocks of a user interface.
+    Header and Content components are just specific types of components that are commonly used in React applications.
+    The Header component typically contains the navigation bar or any other elements that appear at the top of the page, such as a logo or a search bar.
+        Example:
+            import React from 'react';
+            function Header()
+            {
+                return (
+                    <header>
+                        <h1>My React App</h1>
+                        <nav>
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                );
+            }
+export default Header;
+-->
+
+Question-7: How to install React Js on Windows, Linux Operating System? How to Install NPM and How to check version of NPM?
+<!-- 
+    1. Install Node.js:
+        React.js requires Node.js as a prerequisite. Node.js is a JavaScript runtime environment that allows you to run JavaScript on the server side.
+        Visit the official Node.js website and download the installer for your operating system (Windows, macOS, or Linux).
+        Install Node.js by following the installation instructions.
+            node -v
+
+    2. Install React using create-react-app (CRA):
+        Open your terminal or command prompt and navigate to the directory where you want to create your React project.
+        Run the following command to globally install the Create React App tool:
+            npm install -g create-react-app
+        To verify the installation, type:
+            create-react-app --version
+
+    3. Create Your React App:
+        Inside your project directory, run:
+            npx create-react-app my-react-app
+        Navigate to the newly created app directory:
+            cd my-react-app
+
+    4. Check NPM Version:
+        Ensure that your NPM version is at least 5.2.0 or newer (required for create-react-app).
+-->
+
+Question-8: How to check version of React Js?
+<!-- 
+    To check the version of React JS, you can use one of the following methods:
+        1) Using package.json file:
+            You can check the version of React JS in the package.json file of your project.
+            The version number will be listed under the dependencies section for the react package.
+
+        2) Using the command line:
+            You can use the following command in your terminal or command prompt to check the version of React JS:
+                npm view react version
+
+        3) Using the version property of default import from React:
+            You can also check the version of React JS in your JavaScript code by importing React and accessing its version property.
+                Example:
+                    import React from 'react';
+                    console.log(React.version);
+-->
+
+Question-9: How to change in components of React Js?
+<!-- 
+    In React, components are the building blocks of your application. Let’s explore how to create and modify components:
+        1) Creating Components:
+            Components can be either Class components or Function components.
+            Class components extend React.Component and include a render() method that returns HTML.
+            Function components are simpler, return HTML, and are preferred in modern React development.
+
+        2) Changing Component Color:
+            To change a component’s color, you can use inline styling in JSX.
+                Example:
+                    const MyComponent = () => {
+                        return <div style={{ color: 'red' }}>Hello, World!</div>;
+                        };
+            In this example, the text color of the div element will be red.
+
+        3) Updating Component State:
+            To update the state of a Functional Component, use the useState hook:
+                const [state, setState] = useState({ text: 'Default value' });
+-->

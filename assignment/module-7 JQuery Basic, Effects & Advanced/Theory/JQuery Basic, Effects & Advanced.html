@@ -1,0 +1,96 @@
+Question-1: What is jQuery?
+
+<!--
+    jQuery is a popular JavaScript library that simplifies HTML document traversing,event handling,and animation. 
+
+    It was created by John Resig in 2006 and has since become one of the most widely used JavaScript libraries.
+
+    jQuery's syntax is designed to make it easier to navigate and manipulate the HTML elements on a web page.
+
+    It uses a CSS-style selector syntax to select elements, which makes it easy for developers who are already familiar with CSS to learn and use jQuery.
+
+    jQuery also provides a number of built-in methods for common tasks,such as handling user interactions,making AJAX requests, and manipulating the DOM.
+
+        Overall, jQuery is a powerful tool that can help developers save time and write more efficient and maintainable code.
+-->
+
+Question-2: How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery, JQuery Animation?
+
+<!--
+    For CSS:
+        To apply CSS using jQuery, you can use the .css() method. 
+
+        This method allows you to set one or more CSS properties for the selected elements.
+
+            Example:$("p").css("color", "blue");
+            // Select all <p> elements and sets their color property to blue.
+
+    For Adding Class:
+        To add class to an element using jQuery, you can use the .addClass() method.
+
+        This method adds the specified class or classes to the selected elements.
+
+            Example: $("p").addClass("highlight");
+
+    For Removing Class:
+        To remove a class from an element using jQuery, you can use the .removeClass() method.
+
+        The .removeClass() method removes a single class, multiple classes, or all classes from the selected elements.
+
+            Example:$("p.highlight").removeClass("highlight");
+
+    For Animation:
+        jQuery also provides several animation methods that allow you to animate certain CSS properties of the selected elements.
+
+        jQuery also provides animation methods which allow you to animate certain CSS properties over time.
+
+        The most commonly used animations are show(), hide(), toggle(), slideUp(), slideDown(), fadeIn(), fadeOut(), and toggle.
+
+            Example:$("p").animate(
+                {
+                    opacity: 0.5,
+                    fontSize: "24px"
+                }, 1000);
+
+                //This code animates the opacity and font size of all paragraph elements on the page over a duration of 1000 milliseconds (or 1 second).
+-->
+
+Question-3: How to create slider with animation?
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    $(document).ready(function()
+    {
+        var currentSlide = 0;
+        var totalSlides = $('.slide').length;
+    function showSlide()
+    {
+        $('.slide').eq(currentSlide).fadeOut(1000, function()
+        {
+            $(this).removeClass('active');
+            currentSlide = (currentSlide + 1) % totalSlides;
+            $('.slide').eq(currentSlide).fadeIn(1000, function()
+        {
+            $(this).addClass('active');
+        });
+        });
+    }
+        setInterval(showSlide, 5000);
+    });
+</script>
+</head>
+<body>
+<div class="slider">
+    <div class="slide"><img src="image1.jpg"></div>
+    <div class="slide"><img src="image2.jpg"></div>
+    <div class="slide"><img src="image3.jpg"></div>
+</div>
+</body>
+</html>
+
+In this example,the showSlide function fades out the current slide,removes the active class from it,calculates the index of the next slide,and adds the active class to it.
+The setInterval function is used to call the showSlide function every 5000 milliseconds (or 5 seconds), creating a continuous animation loop.
+-->

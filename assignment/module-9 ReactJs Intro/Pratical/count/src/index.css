@@ -1,0 +1,48 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  background-color: #4684F3;
+  font-family: 'Roboto', sans-serif;
+}
+.count
+{
+  margin-top: 15%;
+  margin-left: 35%;
+  width: 60%;
+}
+.count h1
+{
+  font-size: 65px;
+  color: #fff;
+  margin-left: 5%;
+  letter-spacing: 3px;
+}
+.count p
+{
+  font-size: 45px;
+  font-weight: 600;
+  margin-left: 18%;
+}
+.count button
+{
+  padding: 15px 20px;
+  box-shadow: 0px 5px 10px black;
+  border-radius: 10px;
+  font-size: 22px;
+  border: none;
+  width: 250px;
+}
+.btn-1
+{
+  margin-left: -6%;
+}
+.btn-2
+{
+  margin-left: 40px;
+}
+.btn-3
+{
+  margin-top: 50px;
+  margin-left: 100px;
+}

@@ -1,0 +1,247 @@
+Question-1: What are the advantages of Bootstrap?
+
+<!--
+    Bootstrap is a popular front-end framework that offers several advantages:
+
+        1) Ease of use:
+            Bootstrap is easy to use and learn,with a well-organized and well-documented library of components.
+
+        2) Responsive design:
+            Bootstrap includes responsive design features, allowing developers to create websites that adapt to different screen sizes and devices.
+
+        3) Consistency:
+            Bootstrap provides a consistent look and feel across different browsers and devices, ensuring a uniform user experience.
+
+        4) Customization:
+            Bootstrap offers extensive customization options, allowing developers to tailor the framework to their specific needs.
+
+        5) Large community:
+            Bootstrap has a large and active community, which means that developers can find plenty of resources, tutorials, and support online.
+
+        6) Time-saving:
+            Bootstrap saves developers time by providing pre-built components and layouts, reducing the need for custom coding.
+
+        7) Compatibility:
+            Bootstrap is compatible with most modern browsers, including Chrome, Firefox, Safari, and Internet Explorer.
+
+        8) Grid system:
+            Bootstrap includes a powerful grid system that makes it easy to create responsive layouts.
+
+        9) JavaScript plugins:
+            Bootstrap includes several JavaScript plugins that add interactivity and functionality to websites.
+
+        10) Open-source:
+            Bootstrap is open-source, which means that it is free to use and modify.
+-->
+
+Question-2: What is a Bootstrap Container, and how does it work?
+
+<!--
+    A Bootstrap Container is a fundamental component of the Bootstrap grid system,which is used to create responsive layouts.
+
+    It serves as a wrapper for the content on the page and helps to align and distribute the content in a structured.
+
+        There are two types of containers in Bootstrap:
+
+            1) Fixed Container:
+                    This type of container has a fixed width and is centered on the page.
+                    The width of the container varies depending on the screen size.
+                        For example:on a large screen,the container will have a width of 1140px,while on a small screen, it will have a width of 970px.
+
+            2) Fluid Container:
+                    This type of container takes up the full width of the viewport and does not have a fixed width.
+                    It is useful when you want to create a full-width layout that spans the entire width of the screen.
+
+To use a container in Bootstrap, you can add the .container class to a <div> element.
+    For example:<div class="container">
+                </div>
+    The container will automatically adjust its width based on the screen size, ensuring that your content is displayed in a responsive manner.
+-->
+
+Question-3: What are the default Bootstrap text settings?
+
+<!--
+    Bootstrap provides several default text settings to ensure a consistent look and feel across different browsers and devices.
+
+    Here are some of the default text settings in Bootstrap:
+
+        1) Font family:
+                Bootstrap uses the system's default sans-serif font,which is typically a font like Helvetica Neue, Arial, or sans-serif.
+                This ensures that the text looks consistent across different platforms and devices.
+
+        2) Font size: The default font size in Bootstrap is 16px.
+
+        3) Line height: The default line height in Bootstrap is 1.5.
+
+        4) Font weight: The default font weight in Bootstrap is normal (400) which is a medium weight.
+
+        5) Headings: Bootstrap provides several heading styles, from <h1> to <h6>, with decreasing font size. The default font weight for headings is bold (700).
+
+        6) Links: Bootstrap provides default styles for links, including underlines and hover effects.
+
+        7) Lists: Bootstrap provides default styles for unordered, ordered, and description lists.
+
+        8) Paragraphs: Bootstrap provides default styles for paragraphs, including margins and line height.
+
+        9) Code: Bootstrap provides default styles for code snippets, including monospace font and background color.
+
+        10) Quotes: Bootstrap provides default styles for blockquotes and pull quotes.
+
+These default text settings can be customized using Bootstrap's utility classes or by overriding the default styles in your own CSS.
+-->
+
+Question-4: What do you know about the Bootstrap Grid System?
+
+<!--
+    The Bootstrap Grid System is a powerful and flexible system for creating responsive layouts.
+
+    It is based on a 12-column grid,which allows you to create a wide variety of layouts that adapt to different screen sizes and devices.
+
+    The grid system consists of several components:
+
+        1) Containers: Containers are used to wrap the content of your page and provide a fixed or fluid width. They are created using the .container or .container-fluid classes.
+
+        2) Rows: Rows are used to group columns and create horizontal sections of content. They are created using the .row class.
+
+        3) Columns: Columns are used to create the actual layout of your content. They are created using the .col-* classes, where * is the number of columns you want to span.
+
+    The grid system also includes several responsive classes that allow you to control the layout on different screen sizes.
+
+    These classes are based on the following breakpoints:
+
+        1) Extra small devices (less than 576px): .col-*
+
+        2) Small devices (576px and up): .col-sm-*
+
+        3) Medium devices (768px and up): .col-md-*
+
+        4) Large devices (992px and up): .col-lg-*
+
+        5) Extra large devices (1200px and up): .col-xl-*
+
+            For example: if you want to create a layout that spans 6 columns on medium devices and up, you would use the following code: <div class="row">
+                                <div class="col-md-6">
+                                Content goes here
+                                </div>
+                                </div>
+
+    The grid system also includes several other features,such as offsetting columns,nesting columns and using responsive utilities to hide or show content on different screen sizes.
+-->
+
+Question-5: What is the difference between Bootstrap 4 and Bootstrap 5?
+
+<!--
+    The main difference between Bootstrap 4 and Bootstrap 5 is the version of jQuery that is used.
+
+    Bootstrap 4 uses jQuery 3.5.1, while Bootstrap 5 uses jQuery 3.6.0.
+
+    This means that Bootstrap 4 is compatible with older versions of jQuery, while Bootstrap 5 is not.
+
+    Another difference is that Bootstrap 5 has dropped support for Internet Explorer 10 and 11,while Bootstrap 4 still supports these browsers.
+
+    Bootstrap 5 has made some changes to the grid system,such as removing the .col-* classes and replacing them with .col-*-* classes, which provide more flexibility in creating responsive layouts.
+
+    Bootstrap 5 has also introduced some new components,such as the .accordion component,which allows you to create collapsible content panels and the .offcanvas component which allows you to create off-canvas menus and sidebars.
+
+    Overall Bootstrap 5 is a more modern and flexible version of Bootstrap that provides improved performance and new features but it may not be compatible with older versions of jQuery or Internet Explorer.
+-->
+
+Question-6: What is a Button Group, and what is the class for a basic Button Group?
+
+<!--
+    A Button Group is a component in Bootstrap that groups a series of buttons together on a single line.
+
+    This is useful when you want to create a group of related buttons such as a group of buttons that perform similar actions or a group of buttons that represent different options in a form.
+
+    To create a Button Group in Bootstrap, you can use the .btn-group class.
+
+    Here is an example of a basic Button Group:
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">Left</button>
+                <button type="button" class="btn btn-secondary">Middle</button>
+                <button type="button" class="btn btn-secondary">Right</button>
+            </div>
+
+    The role="group" attribute is used to indicate that the buttons are grouped together, and the aria-label attribute is used to provide a label for the group that is accessible to screen readers.
+
+    The .btn-secondary class is used to apply a specific style to the buttons.
+-->
+
+Question-7: How can you use Bootstrap to make thumbnails?
+
+<!--
+    In Bootstrap,you can use the card component to create thumbnails.
+
+    The card component is a flexible and extensible content container that can be used to display a wide variety of content,including images,text, and links.
+
+    To create a thumbnail using the card component, you can follow these steps:
+        1) Create a div element with the card class. This will serve as the container for your thumbnail.
+
+        2) Add an img element with the card-img-top class to display an image at the top of the thumbnail.
+
+        3) Add a div element with the card-body class to contain the text and other content of the thumbnail.
+
+        4) Add any additional content to the card-body, such as a title, description, or links.
+
+        5) Add the .d-block class to the img element to make it display as a block element.
+-->
+
+Question-8: In Bootstrap 4, what is flexbox?
+
+<!--
+    Flexbox is a layout mode in CSS that allows you to create flexible and responsive layouts.
+
+    It is designed to make it easier to align and distribute elements on a page,even when the size of the elements or the page changes.
+
+    In Bootstrap 4,flexbox is used to create the grid system and many of the components,such as the button group and the card.
+
+    The .d-flex class is used to enable flexbox on an element and there are many other classes that you can use to customize the layout of the flex container and its children.
+
+    Here are some of the key features of flexbox in Bootstrap 4:
+
+        1) Flex container: The flex container is the parent element that contains the flex items.
+            You can create a flex container by applying the .d-flex class to an element.
+
+        2) Flex direction: The flex direction determines the direction in which the flex items are arranged.
+            You can use the .flex-row class to arrange the flex items in a row or the .flex-column class to arrange them in a column.
+
+        3) Flex wrap: The flex wrap property determines whether the flex items should wrap to a new line when they don't fit on the current line.
+            You can use the .flex-wrap class to enable flex wrap, or the .flex-nowrap class to disable it.
+
+        4) Justify content: The justify content property determines how the flex items are aligned along the main axis (the x-axis for rows and the y-axis for columns).
+            You can use the .justify-content-start,
+            .justify-content-center
+            .justify-content-end
+            .justify-content-between
+            .justify-content-around classes to align the flex items.
+
+        5) Align items: The align items property determines how the flex items are aligned along the cross axis.
+            The y-axis for rows and the x-axis for columns.
+            You can use the .align-items-start,
+            .align-items-center
+            .align-items-end
+            .align-items-stretch classes to align the flex items.
+
+        6) Align self: The align self property allows you to override align items property for a specific flex item.
+            You can use the .align-self-start,
+            .align-self-center
+            .align-self-end
+            .align-self-stretch classes to align a flex item.
+
+    Flexbox is a powerful tool for creating responsive layouts in Bootstrap 4. It allows you to easily align and distribute elements on a page and it is well-supported in modern browsers.
+-->
+
+Question-9: How can one create an alert in Bootstrap?
+
+<!--
+    <div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">Danger!</h4>
+    <p>This is a danger alert with a heading and a paragraph of text.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    </div>
+
+    The .alert-heading class is used to style the heading and the <hr> element is used to add a horizontal rule between the heading and the paragraph. The .mb-0 class is used to remove the bottom margin from the last paragraph.
+-->
+
+Question-10: What is a bootstrap card and how would you create one?

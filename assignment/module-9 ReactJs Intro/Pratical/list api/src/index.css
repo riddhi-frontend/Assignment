@@ -1,0 +1,46 @@
+.app
+{
+  width: 60%;
+  margin: auto;
+  margin-top: 8%;
+  height: 500px;
+  background-color: #A5CE4C;
+}
+.app h1
+{
+  text-align: center;
+  font-size: 45px;
+  color: #445F00;
+  padding-top: 50px !important;
+}
+.app ul
+{
+  list-style-type: none;
+  margin-left: 15%;
+}
+.app ul li
+{
+  margin: 10px;
+  display: flex;
+}
+.app ul li input
+{
+  border: none;
+  clip-path: circle(40% at 50% 50%);
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+  background-color: #BBD675;
+}
+.app ul li a
+{
+  padding: 18px;
+  background-color: #F6FAEC;
+  border: none;
+  text-decoration: none;
+  margin:1%;
+  color: #4F5635;
+  width: 66% !important;
+  font-size: 22px;
+  font-weight: bold;
+}
