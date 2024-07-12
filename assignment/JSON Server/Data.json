@@ -1,0 +1,52 @@
+{
+    "Product" : [
+        {
+            "id": "1001",
+            "Name": "Product 1",
+            "Old Price": 1000,
+            "Offer Price": 750,
+            "photo": "https://th.bing.com/th/id/OIP.K3lB5UYaGd_oV3GdQzev9wHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+            "Qty" : 1,
+            "Description" : "Good for skin "
+        },
+        {
+            "id": "1002",
+            "Name": "Product 2",
+            "Old Price": 250,
+            "Offer Price": 200,
+            "photo": "https://th.bing.com/th/id/OIP.K3lB5UYaGd_oV3GdQzev9wHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+            "Qty" : 1,
+            "Description" : "Good for hair "
+        },
+        {
+            "id": "1001",
+            "Name": "Product 1",
+            "Old Price": 999,
+            "Offer Price": 799,
+            "photo": "https://th.bing.com/th/id/OIP.K3lB5UYaGd_oV3GdQzev9wHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+            "Qty" : 1,
+            "Description" : "Good for dry hair "
+        }
+    ],
+
+    "Review" : [
+        {
+            "Name": "Product 1",
+            "photo": "https://th.bing.com/th/id/OIP.K3lB5UYaGd_oV3GdQzev9wHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+            "Rating": "10 out of 10",
+            "Review": "Good for skin "
+        },
+        {
+            "Name": "Product 2",
+            "photo": "https://th.bing.com/th/id/OIP.K3lB5UYaGd_oV3GdQzev9wHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+            "Rating": "8 out of 10",
+            "Review": "Good for hair "
+        },
+        {
+            "Name": "Product 3",
+            "photo": "https://th.bing.com/th/id/OIP.K3lB5UYaGd_oV3GdQzev9wHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.4&pid=1.7",
+            "Rating": "7 out of 10",
+            "Review": "I is very usefull for dry hair"
+        }
+    ]
+}
