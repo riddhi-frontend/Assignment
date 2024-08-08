@@ -1,0 +1,90 @@
+Question-1: What is Redux?
+<!-- 
+    Redux is a state management library for JavaScript applications, often used with React.
+
+    It helps manage the state of an application in a predictable way by providing a single source of truth for the state, known as the store.
+
+    Here are the core concepts of Redux:
+
+        Store: The central place where the entire state of your application is kept.The store is an object that holds the application's state and provides methods to access the state, dispatch actions, and register listeners.
+
+        Actions: Plain JavaScript objects that describe what happened in the application. Actions are the only source of information for the store and must have a type property that indicates the type of action being performed. Actions may also include other data that is needed to update the state.
+
+        Reducers: Pure functions that take the current state and an action as arguments and return a new state. Reducers specify how the application's state changes in response to actions sent to the store. Since reducers are pure functions, they do not mutate the state but instead return a new state object.
+
+        Dispatch: The method used to send actions to the store. When an action is dispatched, the store calls the reducer and passes the current state and the action to it. The reducer processes the action and returns a new state.
+
+        Selectors: Functions used to extract specific pieces of data from the state. Selectors can help keep components decoupled from the state structure.
+
+        Middleware: Extensions that provide third-party capabilities between the dispatching of an action and the moment it reaches the reducer. Middleware can be used for logging, crash reporting, making asynchronous requests, and more. 
+
+        Example:
+
+            Action:
+                const increment = () => {
+                    return {
+                        type: 'INCREMENT'
+                    };
+                };
+
+            Reducer:
+                const counter = (state = 0, action) => {
+                    switch (action.type) {
+                        case 'INCREMENT':
+                            return state + 1;
+                        default:
+                            return state;
+                    }
+                };
+
+            Store:
+                import { createStore } from 'redux';
+                const store = createStore(counter);
+
+            Dispatch:
+                store.dispatch(increment());
+                console.log(store.getState()); // Output: 1
+-->
+
+Question-2: What is Redux Thunk used for?
+<!-- 
+    Redux Thunk is a middleware for Redux that allows you to write action creators that return a function instead of an action. This is particularly useful for handling asynchronous operations in a Redux application, such as API calls or complex logic that requires dispatching multiple actions. Here's how it works and why it's useful:
+
+    Why Use Redux Thunk?
+        Asynchronous Actions: Without middleware like Redux Thunk, Redux only allows synchronous actions, meaning each action immediately produces a new state. Thunk allows you to delay the dispatch of an action or dispatch only if a certain condition is met, which is crucial for async operations.
+
+        Complex Action Logic: If you need to dispatch multiple actions based on certain conditions, Thunk allows you to encapsulate this logic within the action creators.
+
+    How Redux Thunk Works
+        Action Creator: Instead of returning an action object, an action creator returns a function. This function can dispatch actions and access the state using dispatch and getState.
+
+        Middleware: Thunk intercepts action creators that return functions, allowing you to perform side effects and dispatch actions conditionally or asynchronously.
+-->
+
+Question-3 : What is Pure Component? When to use Pure Component over Component?
+<!--
+    PureComponent is a class component that implements a shallow comparison of props and state to decide whether the component should re-render.
+
+    It extends React.Component but with a more efficient shouldComponentUpdate() method that can help improve performance in certain scenarios.
+
+        What is PureComponent?
+            PureComponent automatically performs a shallow comparison of both the component's state and props to determine if a re-render is necessary. This means that if the new props or state are equal to the previous ones, the component will not re-render.
+
+        When to Use PureComponent
+            Performance Optimization: Use PureComponent when you want to prevent unnecessary re-renders for performance reasons. This is particularly useful when a component has a complex render method or when it's nested deeply in the component tree.
+
+            Pure Functions: Use PureComponent when your component's render output is purely determined by its props and state. If the render method doesn't rely on any other data or side effects, a PureComponent can be a good fit.
+
+        When Not to Use PureComponent
+            Complex or Deep Data Structures: If your props or state include complex or deeply nested objects or arrays, PureComponent's shallow comparison might not be sufficient. In such cases, it might miss changes in deeply nested properties, leading to incorrect UI updates.
+
+            Frequent Updates with New References: If you frequently pass new object or array references as props, even if their contents haven't changed, PureComponent will still re-render because the shallow comparison will detect the new references.
+-->
+
+Question-4: What is the second argument that can optionally be passed tosetState and what is its purpose?
+<!--
+    The second argument that can optionally be passed to setState in React is a callback function. This callback function is executed once the setState operation has completed and the component has re-rendered.
+
+    Purpose of the Callback Function
+        The primary purpose of the callback function is to perform any post-update operations that depend on the updated state. Since setState is asynchronous, it doesn't immediately update the component's state. The callback ensures that the code you want to execute runs after the state has been updated and the component has re-rendered.
+-->
